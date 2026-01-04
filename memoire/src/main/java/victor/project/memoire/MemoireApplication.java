@@ -12,9 +12,8 @@ public class MemoireApplication {
   public static void main(String[] args) {
     SpringApplication.run(MemoireApplication.class, args);
 
-    exercice1 employee = new exercice1("victor", 25, "BOSS");
+    Employee employee = new Employee("victor", 25, "BOSS");
 
-    
     System.out.println(employee.getName());
 
   }

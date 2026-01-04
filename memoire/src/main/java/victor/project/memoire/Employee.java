@@ -5,26 +5,25 @@ public class Employee {
   private int age;
   private String role;
 
-      public String getName() {
-        return this.name;
-    }
+  public String getName() {
+    return this.name;
+  }
 
+  public int getAge() {
+    return this.age;
+  }
 
-    public int getAge() {
-        return this.age;
-    }
+  public void setAge(int age) {
+    this.age = age;
+  }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+  public String getRole() {
+    return this.role;
+  }
 
-    public String getRole() {
-        return this.role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
+  public void setRole(String role) {
+    this.role = role;
+  }
 
   public Employee(String name, int age, String role) {
     this.name = name;
