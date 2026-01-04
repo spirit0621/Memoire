@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "victor.project.memoire.Main",
+            "projectName": "memoire"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-MemoireApplication<memoire>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
