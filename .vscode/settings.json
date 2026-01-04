@@ -1,9 +1,0 @@
-{
-    "java.compile.nullAnalysis.mode": "automatic",
-    "CodeGPT.apiKey": "OpenRouter",
-    "java.configuration.updateBuildConfiguration": "automatic",
-    "java.autobuild.enabled": true,
-    "java.saveActions.organizeImports": true,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000
-}
