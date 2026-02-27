@@ -14,7 +14,7 @@ public class MainController {
         SpringApplication.run(MainController.class, args);
     }
 
-    @GetMapping("/")
+    @GetMapping("/hello")
     public String hello() {
         return "hello world";
     }
