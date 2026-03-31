@@ -27,4 +27,26 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     // Premier appel automatique
     chargerDonnees();
+
+    const elementAffichage2 = document.getElementById('users');
+
+    // La logique de l'appel AJAX
+    const chargerDonnees2 = async () => {
+        try {
+            const response = await fetch('/users');
+
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP : ${response.status}`);
+            }
+
+            const texte = await response.text();
+            elementAffichage2.innerText = texte;
+
+        } catch (erreur) {
+            console.error("Erreur lors de la récupération :", erreur);
+            elementAffichage2.innerText = "Erreur de connexion au serveur.";
+        }
+    };
+    // Premier appel automatique
+    chargerDonnees2();
 });
