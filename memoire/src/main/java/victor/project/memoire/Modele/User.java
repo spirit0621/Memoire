@@ -14,7 +14,7 @@ public class User {
     private String email;
 
     public Integer getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Integer id) {
