@@ -1,7 +1,7 @@
 package victor.project.memoire.Seed;
 
 import victor.project.memoire.Modele.User;
-import victor.project.memoire.Repository.UserRepository;
+import victor.project.memoire.Repository.UtilisateurRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 // @Profile("dev") // ne s’exécute que quand le profil "dev" est actif
 public class UserSeed implements CommandLineRunner {
 
-    private final UserRepository userRepository;
+    private final UtilisateurRepository userRepository;
 
-    public UserSeed(UserRepository userRepository) {
+    public UserSeed(UtilisateurRepository userRepository) {
         this.userRepository = userRepository;
     }
 
