@@ -4,8 +4,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import victor.project.memoire.Modele.Etablissement;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "utilisateur")
@@ -13,8 +18,8 @@ public class Utilisateur {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    
     private Integer id;
-
     private String prenom;
     private String nom;
     private String email;
@@ -26,7 +31,10 @@ public class Utilisateur {
     private String ville;
     private String codePostal;
     private BigDecimal tauxImposition = BigDecimal.ZERO;
-    private Integer etablissementId;
+    private Etablissement etablissement;
+
+    @OneToMany(mappedBy = "utilisateur")
+    private List<Contrat> contrats;
 
     public Integer getId() {
         return id;
@@ -124,11 +132,13 @@ public class Utilisateur {
         this.tauxImposition = tauxImposition;
     }
 
-    public Integer getEtablissementId() {
-        return etablissementId;
+    @ManyToOne
+    @JoinColumn(name = "etablissement_id")
+    public Etablissement getEtablissement() {
+        return etablissement;
     }
 
-    public void setEtablissementId(Integer etablissementId) {
-        this.etablissementId = etablissementId;
+    public void setEtablissement(Etablissement etablissement) {
+        this.etablissement = etablissement;
     }
 }

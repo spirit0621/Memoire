@@ -5,6 +5,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import victor.project.memoire.Modele.Utilisateur;
+import victor.project.memoire.Modele.Contrat;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -16,8 +20,8 @@ public class FicheDePaie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private Integer utilisateurId;
-    private Integer contratId;
+    private Utilisateur utilisateur;
+    private Contrat contrat;
     private String periodeMoisAnnee;
     private BigDecimal salaireBase;
     private BigDecimal totalBrut;
@@ -33,20 +37,24 @@ public class FicheDePaie {
         this.id = id;
     }
 
-    public Integer getUtilisateurId() {
-        return utilisateurId;
+    @ManyToOne
+    @JoinColumn(name = "utilisateur_id")
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
     }
 
-    public void setUtilisateurId(Integer utilisateurId) {
-        this.utilisateurId = utilisateurId;
+    public void setUtilisateur(Utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
     }
 
-    public Integer getContratId() {
-        return contratId;
+    @ManyToOne
+    @JoinColumn(name = "contrat_id")
+    public Contrat getContrat() {
+        return contrat;
     }
 
-    public void setContratId(Integer contratId) {
-        this.contratId = contratId;
+    public void setContrat(Contrat contrat) {
+        this.contrat = contrat;
     }
 
     public String getPeriodeMoisAnnee() {

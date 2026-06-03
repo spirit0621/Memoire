@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -15,14 +17,19 @@ public class Contrat {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
-    private Integer utilisateurId;
-    private Integer posteId;
     private String typeContrat;
     private BigDecimal salaireBaseMensuel;
     private LocalDate dateDebut;
     private LocalDate dateFin;
     private String statut = "ACTIF";
+
+    @ManyToOne
+    @JoinColumn(name = "poste_id")
+    private Poste poste;
+
+    @ManyToOne
+    @JoinColumn(name = "utilisateur_id")
+    private Utilisateur utilisateur;
 
     public Integer getId() {
         return id;
@@ -32,20 +39,20 @@ public class Contrat {
         this.id = id;
     }
 
-    public Integer getUtilisateurId() {
-        return utilisateurId;
+    public Utilisateur getUtilisateur() {
+        return utilisateur;
     }
 
-    public void setUtilisateurId(Integer utilisateurId) {
-        this.utilisateurId = utilisateurId;
+    public void setUtilisateur(Utilisateur utilisateur) {
+        this.utilisateur = utilisateur;
     }
 
-    public Integer getPosteId() {
-        return posteId;
+    public Poste getPoste() {
+        return poste;
     }
 
-    public void setPosteId(Integer posteId) {
-        this.posteId = posteId;
+    public void setPoste(Poste poste) {
+        this.poste = poste;
     }
 
     public String getTypeContrat() {
