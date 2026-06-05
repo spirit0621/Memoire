@@ -19,8 +19,11 @@ public class FicheDePaie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
-    private Utilisateur utilisateur;
+    @ManyToOne
+    @JoinColumn(name = "utilisateur_id")
+    private Utilisateur utilisateur;    
+    @ManyToOne
+    @JoinColumn(name = "contrat_id")
     private Contrat contrat;
     private String periodeMoisAnnee;
     private BigDecimal salaireBase;
@@ -37,8 +40,7 @@ public class FicheDePaie {
         this.id = id;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "utilisateur_id")
+   
     public Utilisateur getUtilisateur() {
         return utilisateur;
     }
@@ -47,8 +49,7 @@ public class FicheDePaie {
         this.utilisateur = utilisateur;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "contrat_id")
+
     public Contrat getContrat() {
         return contrat;
     }

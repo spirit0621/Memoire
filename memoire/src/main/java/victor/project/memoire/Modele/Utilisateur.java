@@ -31,6 +31,8 @@ public class Utilisateur {
     private String ville;
     private String codePostal;
     private BigDecimal tauxImposition = BigDecimal.ZERO;
+    @ManyToOne
+    @JoinColumn(name = "etablissement_id")
     private Etablissement etablissement;
 
     @OneToMany(mappedBy = "utilisateur")
@@ -132,8 +134,7 @@ public class Utilisateur {
         this.tauxImposition = tauxImposition;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "etablissement_id")
+ 
     public Etablissement getEtablissement() {
         return etablissement;
     }
