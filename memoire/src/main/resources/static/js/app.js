@@ -1,52 +1,26 @@
-/**
- * Fichier : app.js
- * Gère les appels AJAX vers le serveur
- */
+import { state } from './state.js';
+import { api } from './api.js';
+import { ui } from './ui.js';
+import { navigateTo, handleRoute } from './router.js';
 
-// On utilise une fonction anonyme pour éviter de polluer l'espace global
-document.addEventListener('DOMContentLoaded', () => {
+// Expose variables globally so that inline onclick attributes in HTML templates can resolve them
+window.state = state;
+window.api = api;
+window.ui = ui;
+window.navigateTo = navigateTo;
 
-    const elementAffichage = document.getElementById('hello');
+window.addEventListener('hashchange', handleRoute);
 
-    // La logique de l'appel AJAX
-    const chargerDonnees = async () => {
-        try {
-            const response = await fetch('/hello');
+// Handle initial routing based on current URL hash
+handleRoute();
 
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP : ${response.status}`);
-            }
-
-            const texte = await response.text();
-            elementAffichage.innerText = texte;
-
-        } catch (erreur) {
-            console.error("Erreur lors de la récupération :", erreur);
-            elementAffichage.innerText = "Erreur de connexion au serveur.";
-        }
-    };
-    // Premier appel automatique
-    chargerDonnees();
-
-    const elementAffichage2 = document.getElementById('users');
-
-    // La logique de l'appel AJAX
-    const chargerDonnees2 = async () => {
-        try {
-            const response = await fetch('/users');
-
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP : ${response.status}`);
-            }
-
-            const texte = await response.text();
-            elementAffichage2.innerText = texte;
-
-        } catch (erreur) {
-            console.error("Erreur lors de la récupération :", erreur);
-            elementAffichage2.innerText = "Erreur de connexion au serveur.";
-        }
-    };
-    // Premier appel automatique
-    chargerDonnees2();
-});
+// Restore user session if stored in localStorage
+async function init() {
+    const saved = localStorage.getItem('paymaster_user');
+    if (saved) {
+        state.user = JSON.parse(saved);
+        await api.fetchAll();
+        handleRoute();
+    }
+}
+init();
