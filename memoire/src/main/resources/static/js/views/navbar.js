@@ -8,10 +8,10 @@ export function renderNavbar() {
     }
     nav.classList.remove('hidden');
 
-    const isRH = state.user.role === 'RH';
+    const isRH = state.user.role === 'ADMIN';
     
     // Pour l'avatar aux initiales (Image 2: AR)
-    const initials = state.user.fullName.split(' ').map(n=>n[0]).join('').toUpperCase();
+    const initials = state.user.fullName ? state.user.fullName.split(' ').map(n=>n[0]).join('').toUpperCase() : '';
 
     nav.innerHTML = `
         <div class="navbar-inner">
@@ -44,7 +44,7 @@ export function renderNavbar() {
             </div>
             <div class="nav-profile">
                 <div class="profile-avatar">${initials}</div>
-                <span class="text-sm font-semibold text-white tracking-wide">${state.user.fullName}</span>
+                <span class="text-sm font-semibold text-white tracking-wide">${state.user.fullName || state.user.prenom}</span>
                 <button class="logout-btn" onclick="api.logout()"><i class="fa-solid fa-power-off"></i></button>
             </div>
         </div>

@@ -12,6 +12,7 @@ export const api = {
             });
             if (res.ok) {
                 const user = await res.json();
+                user.fullName = `${user.prenom} ${user.nom}`; // Construct fullName
                 state.user = user;
                 localStorage.setItem('paymaster_user', JSON.stringify(user));
                 return true;
