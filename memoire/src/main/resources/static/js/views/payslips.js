@@ -1,7 +1,7 @@
 import { state } from '../state.js';
 
 export function renderPayslips(container) {
-    const isRH = state.user.role === 'RH';
+    const isRH = state.user.role === 'ADMIN';
     container.innerHTML = `
         <div class="page-header" style="align-items: flex-start;">
             <div>

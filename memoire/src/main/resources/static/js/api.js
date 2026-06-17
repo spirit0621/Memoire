@@ -3,15 +3,16 @@ import { navigateTo } from './router.js';
 
 // --- API Service ---
 export const api = {
-    async login(username, password) {
+    async login(email, password) {
         try {
             const res = await fetch('/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password })
+                body: JSON.stringify({ email, password })
             });
             if (res.ok) {
                 const user = await res.json();
+                user.fullName = `${user.prenom} ${user.nom}`; // Construct fullName
                 state.user = user;
                 localStorage.setItem('paymaster_user', JSON.stringify(user));
                 return true;

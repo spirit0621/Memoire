@@ -8,7 +8,7 @@ export function renderDashboard(container) {
     container.innerHTML = `
         <div class="dashboard-hero">
             <div class="dashboard-hero-content">
-                <h1 class="text-4xl font-bold mb-2">Bonjour, ${state.user.fullName.split(' ')[0]} 👋</h1>
+                <h1 class="text-4xl font-bold mb-2">Bonjour, ${state.user.prenom} 👋</h1>
                 <p class="text-slate-300 text-lg">Prêt à gérer la paie de ce mois ? Voici un aperçu de votre activité.</p>
                 <div class="mt-8 flex gap-4">
                     <button class="btn btn-primary" onclick="navigateTo('employees')" style="padding: 0.75rem 1.5rem;">Gérer les salariés</button>

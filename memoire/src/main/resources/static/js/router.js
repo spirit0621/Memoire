@@ -26,7 +26,6 @@ export async function handleRoute() {
 
     renderNavbar();
     await api.fetchAll();
-
     switch(hash) {
         case 'login': renderLogin(container); break;
         case 'dashboard': renderDashboard(container); break;

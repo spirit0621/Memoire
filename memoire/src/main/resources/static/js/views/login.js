@@ -10,8 +10,8 @@ export function renderLogin(container) {
                 <h2 class="text-xl font-bold text-center mb-6">Connexion PayMaster Pro</h2>
                 <form id="login-form">
                     <div class="form-group">
-                        <label class="form-label">Identifiant</label>
-                        <input type="text" id="username" class="form-control" placeholder="admin ou jean" required>
+                        <label class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="admin ou jean" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label">Mot de passe</label>
@@ -24,7 +24,7 @@ export function renderLogin(container) {
     `;
     document.getElementById('login-form').addEventListener('submit', async (e) => {
         e.preventDefault();
-        const success = await api.login(document.getElementById('username').value, document.getElementById('password').value);
+        const success = await api.login(document.getElementById('email').value, document.getElementById('password').value);
         if (success) navigateTo('dashboard');
         else ui.showToast('Erreur de connexion', 'error');
     });

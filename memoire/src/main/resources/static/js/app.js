@@ -19,6 +19,9 @@ async function init() {
     const saved = localStorage.getItem('paymaster_user');
     if (saved) {
         state.user = JSON.parse(saved);
+        if (!state.user.fullName) {
+            state.user.fullName = `${state.user.prenom} ${state.user.nom}`;
+        }
         await api.fetchAll();
         handleRoute();
     }
