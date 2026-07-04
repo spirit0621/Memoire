@@ -1,0 +1,91 @@
+# 📋 Actions Futures - Application Memoire
+
+## 📊 État Global (Progression : 25%)
+- ✅ **18** Tâches complétées (Modèles JPA, Base de données, Structure de base)
+- 🔄 **8** Tâches en cours
+- ❌ **47** Tâches à faire
+
+**🔴 Blocages Principaux :** 
+1. La **Service Layer** est manquante (bloque tout le métier).
+2. La logique de paie complexe dans **`PayrollService`**.
+3. Le choix technique final entre **JWT** et **Session** pour l'authentification.
+
+---
+
+## 🎯 1. Priorités Absolues (Backend)
+
+- [ ] **Développer la Service Layer (CRITIQUE)**
+  - [ ] `UserService` & `EmployeeService`
+  - [ ] `PayrollService` (Logique de paie, calculs des cotisations et impôts)
+  - [ ] `ContractService` & `AbsenceService`
+
+- [ ] **Gestion des Salariés (Epic #29)**
+  - [ ] **Création d'un salarié (#30) :**
+    - [ ] UI : Pop-up suppression établissement et renommer "groupe" en "établissement".
+    - [ ] API : Créer un contrôleur `Establishment` retournant tous les établissements (nom et id caché).
+    - [ ] DB/Backend : Créer tous les champs manquants pour créer un employé (réf : seed user BOB).
+    - [ ] API : Nouveau contrôleur avec méthode POST (ajout employé). Argument : DTO ajout employé. Retour : statut de la requête.
+  - [ ] **Affichage de la liste des employés (#31)**
+  - [ ] **Calcul et affichage de l'effectif total (#32) :**
+    - [ ] API : Créer un endpoint qui compte le nombre de salariés.
+    - [ ] UI : Afficher l'information sur la page RH.
+  - [ ] **Calcul et affichage de la masse salariale (#33) :**
+    - [ ] Service : Fetch de tous les contrats.
+    - [ ] Contrôleur : Faire la somme des montants.
+
+- [ ] **Feature Bulletin de paie (Epic #25)**
+  - [ ] Créer une seed : plusieurs bulletins de paie pour l'utilisateur BOB (#26)
+  - [ ] **Affichage bulletin côté employé (#27) :**
+    - [ ] Créer un contrôleur (Argument : utilisateur).
+    - [ ] Retour : Liste d'éléments à définir.
+    - [ ] Comportement : Requête qui va chercher dans la table des fiches de paie via l'ID.
+    - [ ] Sécurité : Seul l'utilisateur peut requêter ses propres bulletins.
+  - [ ] **Affichage côté RH (#28) :**
+    - [ ] Contrôleur : Même fichier (ex: `allbulletin`), sans argument.
+    - [ ] Retour : Liste de tous les bulletins.
+    - [ ] Comportement : Recherche de tous les bulletins de paie de tous les employés.
+    - [ ] Sécurité : Accès restreint au rôle ADMIN.
+
+- [ ] **Fiabilisation & Compléments REST**
+  - [ ] Finaliser la sécurité (RBAC, Logout, JWT/Session)
+  - [ ] Ajouter les validations de données serveur (`@Valid`, etc.)
+  - [ ] Configurer un système de logs global (Logback)
+
+---
+
+## 🎨 2. Refactoring et Simplification UI (Frontend)
+
+- [ ] 🇬🇧 **Général :** Traduire l'ensemble de l'interface en anglais.
+- [ ] 🗑️ **Général :** Supprimer le simulateur.
+- [ ] 🧹 **Nettoyage Dashboard Admin :**
+  - [ ] Enlever la case "Heures supplémentaires".
+- [ ] 🧹 **Nettoyage Dashboard Employé & Vues générales :**
+  - [ ] Enlever les cases : "Masse salariale" et "Nombre d'employés".
+  - [ ] Enlever les cases : "Raccourcis", "Note d'information" et "Gérer les employés".
+  - [ ] Enlever les filtres : "Salarié", "Générer" et "Net à payer".
+- [ ] 🔌 **Intégration API :** Remplacer les fausses données Frontend par de vrais appels API vers le Backend.
+
+---
+
+## ⚙️ 3. Tests & Déploiement
+
+- [ ] **Tests Qualité :**
+  - [ ] Tests Unitaires et d'Intégration Backend (Objectif : > 80% coverage).
+  - [ ] Tests de sécurité (Injections, XSS, authentification).
+- [ ] **Infrastructure :**
+  - [ ] Finaliser la configuration `docker-compose.yml`.
+  - [ ] Mettre en place un pipeline CI/CD de base.
+  - [ ] Préparer les environnements (Dev, Test, Prod).
+
+---
+
+## 🚀 4. Évolutions Futures (Version 2.0)
+
+- [ ] 🔔 Système de notifications (Email, In-App).
+- [ ] ⏱️ Gestion du temps de travail (Timesheet).
+- [ ] 📱 Application Mobile.
+- [ ] 💶 Intégration avec des logiciels comptables externes (SAGE, Ciel).
+- [ ] 📊 Module d'analyse avancée et de prévisions.
+
+---
+*Dernière mise à jour : 2026-07-04*
