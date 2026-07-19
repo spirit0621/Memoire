@@ -6,6 +6,16 @@
 
 ---
 
+## Sommaire
+- [1. Présentation du Projet](#1-présentation-du-projet)
+- [2. Fonctionnalités Principales](#2-fonctionnalités-principales)
+- [3. Flux de Travail Clés](#3-flux-de-travail-clés)
+- [4. Interfaces Utilisateur (Vue Navigation)](#4-interfaces-utilisateur-vue-navigation)
+- [5. Critères de Validation](#5-critères-de-validation)
+- [6. Évolutions Futures (v2.0 et au-delà)](#6-évolutions-futures-v20-et-au-delà)
+- [7. Tableau de Synthèse - État d'Implémentation](#7-tableau-de-synthèse---état-dimplémentation)
+- [8. Notes Importantes pour l'Équipe](#8-notes-importantes-pour-léquipe)
+
 ## 📊 Résumé d'Implémentation
 
 ```
@@ -380,7 +390,37 @@ L'application **Memoire** est une plateforme de gestion intégrée des ressource
 
 ## 4. Interfaces Utilisateur (Vue Navigation)
 
-### 4.1 Navigation Principale
+### 4.1 Détail des Vues (Pages et Fenêtres imbriquées)
+
+- **Page 1: Connexion**
+  Interface de sécurité (Email/Mot de passe) avec redirection automatique selon le rôle (ADMIN ou Salarié).
+- **Page 2: Profil (pour salarié)**
+  ces informations persos
+- **Page 3: Bulletin de paie (pour salarié)**
+  Bulletin de paie
+  filtre par mois et année
+  extraire sous forme PDF
+- **Page 4: Liste des employés (pour RH)**
+  Filtre nom prenom
+  information sur salarié
+  ajouter supprimer et modifier un salarié
+  - **Fenêtre A: Création de Salarié (Onboarding)**
+  - **Fenêtre B: Suivi et Modification du Salarié**
+- **Page 5 : Gestion des Établissements**
+  Liste des établissements
+  CRUD des établissements
+  - **Fenêtre C: Édition / Création d'Établissement**
+  - **Fenêtre D: Modification Établissement**
+- **Page 6: Bulletin de paie (pour Admin)**
+  Bulletin de paie
+  filtre par mois, année, personne
+  extraire sous forme PDF
+  - **Fenêtre E: Détail et Validation du Bulletin** - *Objectif:* Prévisualiser le calcul d'un bulletin avant son verrouillage (validation). S'assure que les retenues et les primes sont correctes et les envoyée.
+- **Page 7: Paramétrage**
+  Interface technique pour mettre à jour les taux de cotisations , les règles et les variables globales de l'entreprise.
+  - **Fenêtre F: Édition / Création de Règle de Paie**
+
+### 4.2 Arborescence Principale
 
 ```
 ├── Dashboard ✅ Créée

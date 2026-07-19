@@ -3,8 +3,8 @@ import { state } from '../state.js';
 export function renderSettings(container) {
     container.innerHTML = `
         <div class="page-header">
-            <h1 class="text-2xl font-bold">Payroll Settings</h1>
-            <button class="btn btn-primary" onclick="ui.openVariableModal()"><i class="fa-solid fa-plus"></i> New Variable</button>
+            <h1 class="text-2xl font-bold">Paramètres de paie</h1>
+            <button class="btn btn-primary" onclick="ui.openVariableModal()"><i class="fa-solid fa-plus"></i> Nouvelle variable</button>
         </div>
         <div class="filter-bar grid grid-cols-3 gap-4">
             <div class="form-group mb-0">
@@ -15,7 +15,7 @@ export function renderSettings(container) {
                 </div>
             </div>
             <div class="form-group mb-0">
-                <label class="text-[10px] uppercase font-bold text-slate-400">Label</label>
+                <label class="text-[10px] uppercase font-bold text-slate-400">Libellé</label>
                 <div class="flex items-center gap-2 border border-slate-200 rounded-md px-3 bg-white">
                     <i class="fa-solid fa-font text-slate-400"></i>
                     <input type="text" id="var-search-label" class="form-control" style="border:none" placeholder="Ex: Bonus..." value="${state.filters.varLabel}">
@@ -24,15 +24,15 @@ export function renderSettings(container) {
             <div class="form-group mb-0">
                 <label class="text-[10px] uppercase font-bold text-slate-400">Type</label>
                 <select id="var-filter-type" class="form-control">
-                    <option value="all">All Types</option>
-                    <option value="fixed">Fixed Amount</option>
-                    <option value="formula">Formula</option>
+                    <option value="all">Tous les types</option>
+                    <option value="fixed">Montant fixe</option>
+                    <option value="formula">Formule</option>
                 </select>
             </div>
         </div>
         <div class="table-wrapper">
             <table class="table">
-                <thead><tr><th>Code</th><th>Label</th><th>Description</th><th>Type</th><th>Actions</th></tr></thead>
+                <thead><tr><th>Code</th><th>Libellé</th><th>Description</th><th>Type</th><th>Actions</th></tr></thead>
                 <tbody id="var-list"></tbody>
             </table>
         </div>
@@ -55,7 +55,7 @@ export function renderSettings(container) {
                 <td class="font-mono text-xs text-blue-600"><b>${v.code}</b></td>
                 <td>${v.label}</td>
                 <td class="text-xs text-slate-500">${v.description}</td>
-                <td><span class="badge ${v.type === 'formula' ? 'badge-indigo' : 'badge-blue'}">${v.type === 'formula' ? 'Formula' : 'Fixed'}</span></td>
+                <td><span class="badge ${v.type === 'formula' ? 'badge-indigo' : 'badge-blue'}">${v.type === 'formula' ? 'Formule' : 'Fixe'}</span></td>
                 <td>
                     <div class="flex gap-1">
                         <button class="btn btn-ghost btn-icon" onclick="ui.openVariableModal(${v.id})"><i class="fa-solid fa-pen"></i></button>

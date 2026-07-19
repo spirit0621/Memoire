@@ -7,6 +7,16 @@
 
 ---
 
+## Sommaire
+- [📊 Vue d'Ensemble du Modèle](#-vue-densemble-du-modèle)
+- [📋 Détail des Entités](#-détail-des-entités)
+- [🔗 Relations Détaillées](#-relations-détaillées)
+- [📊 Énumérations](#-énumérations)
+- [🔐 Contraintes & Validations](#-contraintes--validations)
+- [📈 Capacité & Performance](#-capacité--performance)
+- [🔄 Évolutions Futures Possibles](#-évolutions-futures-possibles)
+- [✅ Checklist d'Implémentation](#-checklist-dimplémentation)
+
 ## 📊 Vue d'Ensemble du Modèle
 
 ```

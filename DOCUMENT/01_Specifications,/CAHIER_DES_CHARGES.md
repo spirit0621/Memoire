@@ -1,11 +1,26 @@
 # Cahier des Charges - Application Memoire
 
+## Sommaire
+
+- [1. Identification du Projet](#1-identification-du-projet)
+- [2. Exigences Fonctionnelles](#2-exigences-fonctionnelles)
+  - [2.6 Interfaces Utilisateur et Objectifs des Pages](#26-interfaces-utilisateur-et-objectifs-des-pages)
+- [3. Exigences Non Fonctionnelles](#3-exigences-non-fonctionnelles)
+- [4. Ressources](#4-ressources)
+- [5. Estimations du Temps de Travail](#5-estimations-du-temps-de-travail)
+- [6. Planning et Phases](#6-planning-et-phases)
+- [7. Critères de Réussite](#7-critères-de-réussite)
+- [8. Risques et Mitigation](#8-risques-et-mitigation)
+- [9. Exclusions](#9-exclusions)
+- [10. Validations du Mémoire](#10-validations-du-mémoire)
+
 ## 1. Identification du Projet
 
 ### 1.1 Général
 
 - **Nom du projet:** Memoire
-- **Type:** Application web de gestion RH et paie
+- **Type:** Application web de gestion RH et paie (Projet personnel - Mémoire de fin d'études en alternance)
+- **Développeur:** Seul étudiant en alternance
 - **Date de création:** 2026
 - **Statut:** En développement
 
@@ -77,6 +92,42 @@
 - Notifications des actions en attente
 - Vue d'ensemble de l'activité
 
+### 2.6 Interfaces Utilisateur et Objectifs des Vues
+
+Afin de répondre aux exigences fonctionnelles, l'application est structurée autour des vues principales suivantes (pages et modales imbriquées) :
+
+- **Page 1: Connexion**
+  Interface de sécurité (Email/Mot de passe) avec redirection automatique selon le rôle (ADMIN ou Salarié).
+- **Page 2: Profil (pour salarié)**
+  ces informations persos
+- **Page 3: Bulletin de paie (pour salarié)**
+  Bulletin de paie
+  filtre par mois et année
+  extraire sous forme PDF
+- **Page 4: Liste des employés (pour RH)**
+  Filtre nom prenom
+  information sur salarié
+  ajouter supprimer et modifier un salarié
+  - **Fenêtre A: Création de Salarié (Onboarding)**
+  - **Fenêtre B: Suivi et Modification du Salarié**
+- **Page 5 : Gestion des Établissements**
+  Liste des établissements
+  CRUD des établissements
+  - **Fenêtre C: Édition / Création d'Établissement**
+  - **Fenêtre D: Modification Établissement**
+- **Page 6: Bulletin de paie (pour Admin)**
+  Bulletin de paie
+  filtre par mois, année, personne
+  extraire sous forme PDF
+  - **Fenêtre E: Détail et Validation du Bulletin** - *Objectif:* Prévisualiser le calcul d'un bulletin avant son verrouillage (validation). S'assure que les retenues et les primes sont correctes et les envoyée.
+- **Page 7: Paramétrage**
+  Interface technique pour mettre à jour les taux de cotisations , les règles et les variables globales de l'entreprise.
+  - **Fenêtre F: Édition / Création de Règle de Paie**
+- **Page 8: Conformité Réglementaire et RGPD**
+  *Objectif:* Répondre aux obligations légales en exposant de manière transparente la politique de confidentialité et de sécurisation des données sensibles.
+- **Page 9: Contact et Support**
+  *Objectif:* Fournir un canal de communication direct pour l'assistance technique ou administrative.
+
 ## 3. Exigences Non Fonctionnelles
 
 ### 3.1 Performance
@@ -125,11 +176,11 @@
 
 ### 4.1 Humaines
 
-- 1 Lead développeur
-- 1 Développeur Backend
-- 1 Développeur Frontend
-- 1 QA/Testeur
-- 1 Responsable RH (Product Owner)
+- **1 Étudiant en alternance** assumant l'ensemble des rôles du cycle de développement :
+  - Lead / Architecte Logiciel
+  - Développeur Backend & Frontend
+  - QA / Testeur
+  - Product Owner / Analyse métier
 
 ### 4.2 Matérielles
 
@@ -147,7 +198,9 @@
 - Conteneurisation: Docker
 - SGBD: À définir (MySQL/PostgreSQL)
 
-## 5. Coûts (Estimé)
+## 5. Estimations du Temps de Travail
+
+*Note : Les coûts financiers classiques sont remplacés par une estimation du temps investi par l'étudiant.*
 
 ### 5.1 Développement
 
@@ -155,15 +208,13 @@
 - Développement Backend: 240 h
 - Développement Frontend: 160 h
 - Tests et QA: 120 h
-- Déploiement: 40 h
-- **Total:** 640 heures
+- Déploiement et Rédaction du Mémoire: 100 h
+- **Total:** ~700 heures
 
-### 5.2 Infrastructure
+### 5.2 Infrastructure (Environnement de dev)
 
-- Serveurs: 2000€/an
-- Licences logiciels: 500€/an
-- Maintenance: 3000€/an
-- **Total:** 5500€/an
+- Hébergement Cloud (ex: Heroku/AWS) : Gratuit (tiers étudiants) ou faible coût.
+- Licences logiciels : Licences étudiantes (IntelliJ Ultimate, etc.)
 
 ## 6. Planning et Phases
 
@@ -227,13 +278,13 @@
 - Évaluation de performances (V2)
 - Multi-langue (V1) - English seulement
 
-## 10. Approvals
+## 10. Validations du Mémoire
 
-| Rôle            | Nom | Date | Signature |
-| ---------------- | --- | ---- | --------- |
-| Directeur Projet | TBD |      |           |
-| Product Owner    | TBD |      |           |
-| Lead Technique   | TBD |      |           |
+| Rôle               | Nom | Date | Signature |
+| ------------------- | --- | ---- | --------- |
+| Étudiant           | TBD |      |           |
+| Tuteur Pédagogique | TBD |      |           |
+| Tuteur Entreprise   | TBD |      |           |
 
 ---
 

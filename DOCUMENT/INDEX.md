@@ -1,10 +1,17 @@
-# Index de Documentation - Application Memoire
+# Index de Documentation du Projet Memoire (Application RH & Paie)
+
+## Sommaire
+- [📚 Vue d'Ensemble](#-vue-densemble)
+- [📖 Documents Disponibles](#-documents-disponibles)
+- [🚀 Par où commencer ?](#-par-où-commencer-)
 
 ## 📚 Vue d'Ensemble
 
 Bienvenue dans la documentation de l'application **Memoire** - un système intégré de gestion des ressources humaines et de la paie.
 
-Ce dossier contient tous les documents de référence, guides techniques et informations nécessaires pour comprendre, développer et maintenir l'application.
+> **Contexte du Projet :** Ce projet est développé par un **seul étudiant en alternance** dans le cadre d'un **projet personnel pour son mémoire de fin d'études**. Les documents de ce dossier adoptent une structure professionnelle standard pour démontrer la maîtrise du cycle de vie logiciel, mais l'ensemble des rôles (Développeur, Architecte, PO, DevOps) est assumé par l'étudiant.
+
+Ce dossier contient tous les documents de référence, guides techniques et informations nécessaires pour comprendre, développer et évaluer l'application.
 
 ---
 
@@ -16,7 +23,7 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 - Identification et objectifs (MVP vs V2)
 - Exigences fonctionnelles et non fonctionnelles (Performance, Sécurité)
 - Ressources estimées, coûts et planning des phases
-**Pour qui:** Directeur Projet, Product Owner, Lead Technique
+**Pour qui:** Jury, Tuteurs, Évaluateurs du mémoire
 
 ### 2. [CAHIER_FONCTIONNEL.md](CAHIER_FONCTIONNEL.md)
 **Objectif:** Décrire les fonctionnalités du système du point de vue utilisateur et l'état actuel.
@@ -25,7 +32,7 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 - Fonctionnalités principales détaillées (Authentification, Employés, Paie, Absences, etc.)
 - Flux de travail clés et navigation UI
 - Points critiques de blocage (Service Layer)
-**Pour qui:** Product Owner, Responsable RH, Développeurs, Utilisateurs finaux
+**Pour qui:** Jury, Examinateurs, Utilisateurs finaux
 
 ### 3. [ARCHITECTURE.md](ARCHITECTURE.md)
 **Objectif:** Documenter les choix de conception globale.
@@ -33,7 +40,7 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 - Modèle architectural (Layered Architecture, MVC)
 - Vue détaillée des couches (Frontend, Controller, Service, Repository, Database)
 - Flux d'authentification (JWT/Session) et flux de paie
-**Pour qui:** Architecte Logiciel, Développeurs Backend & Frontend
+**Pour qui:** Évaluateurs techniques, Architecte Logiciel
 
 ### 4. [CAHIER_TECHNIQUE.md](CAHIER_TECHNIQUE.md)
 **Objectif:** Guide technique pour la mise en place et le développement.
@@ -41,7 +48,7 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 - Stack technologique (Java 21, Spring Boot 3, MySQL, Vanilla JS)
 - Configuration des environnements (Dev, Docker)
 - Conventions de code, stratégies de tests et CI/CD
-**Pour qui:** Développeurs, DevOps, QA
+**Pour qui:** Évaluateurs techniques
 
 ### 5. [MODELE_DONNEES.md](MODELE_DONNEES.md)
 **Objectif:** Détailler le schéma de la base de données.
@@ -49,7 +56,7 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 - Diagramme des 9 entités JPA (User, Contract, Payslip, Absence...)
 - Description détaillée de chaque table et de ses relations (OneToMany, ManyToOne)
 - Énumérations et contraintes métier
-**Pour qui:** DBA, Développeurs Backend
+**Pour qui:** Évaluateurs techniques
 
 ### 6. [ACTIONS_FUTURES.md](ACTIONS_FUTURES.md)
 **Objectif:** Suivre l'avancement et planifier le travail restant.
@@ -57,7 +64,7 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 - Résumé d'exécution et blocages identifiés (Service Layer, PayrollService)
 - Liste des tâches à faire par catégorie (Backend, Frontend, Tests, Déploiement)
 - Dépendances entre les tâches et priorisation
-**Pour qui:** Project Manager, Scrum Master, Toute l'équipe technique
+**Pour qui:** Tuteur de mémoire, Étudiant
 
 ### 7. [GLOSSAIRE.md](GLOSSAIRE.md)
 **Objectif:** Standardiser le vocabulaire du projet.
@@ -65,7 +72,7 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 - Définitions des termes métier RH (Bulletin de paie, cotisations, absences)
 - Définitions des termes techniques (JPA, DTO, JWT)
 - Conventions de nommage (Base de données, Java, JavaScript, CSS)
-**Pour qui:** Tous les intervenants du projet (Onboarding)
+**Pour qui:** Tous les lecteurs du mémoire
 
 ### 8. [RESSOURCES_REFERENCES.md](RESSOURCES_REFERENCES.md)
 **Objectif:** Centraliser les liens et outils utiles.
@@ -73,7 +80,7 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 - Liens vers la documentation officielle (Spring, Java, MDN, Docker)
 - Dépendances Maven recommandées (pom.xml)
 - Templates de code (Controllers Spring Boot, Fetch API JS)
-**Pour qui:** Développeurs
+**Pour qui:** Étudiant / Développeur
 
 ---
 

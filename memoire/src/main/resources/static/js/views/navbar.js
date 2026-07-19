@@ -17,25 +17,25 @@ export function renderNavbar() {
         <div class="navbar-inner">
             <a href="#dashboard" class="nav-brand">
                 <div class="nav-brand-icon"><i class="fa-solid fa-calculator"></i></div>
-                <span>PayMaster <span style="color:#60a5fa">Pro</span></span>
+                <span>GFPS <span style="color:#60a5fa"></span></span>
             </a>
             <div class="nav-links">
                 <a href="#dashboard" class="nav-link ${window.location.hash === '#dashboard' ? 'active' : ''}">
-                    <i class="fa-solid fa-chart-pie"></i> <span>Home</span>
+                    <i class="fa-solid fa-chart-pie"></i> <span>Accueil</span>
                 </a>
                 ${isRH ? `
                     <a href="#employees" class="nav-link ${window.location.hash === '#employees' ? 'active' : ''}">
-                        <i class="fa-solid fa-users"></i> <span>Employees</span>
+                        <i class="fa-solid fa-users"></i> <span>Employés</span>
                     </a>
                     <a href="#payslips" class="nav-link ${window.location.hash === '#payslips' ? 'active' : ''}">
-                        <i class="fa-solid fa-file-invoice-dollar"></i> <span>Payslips</span>
+                        <i class="fa-solid fa-file-invoice-dollar"></i> <span>Fiches de paie</span>
                     </a>
                     <a href="#settings" class="nav-link ${window.location.hash === '#settings' ? 'active' : ''}">
-                        <i class="fa-solid fa-sliders"></i> <span>Settings</span>
+                        <i class="fa-solid fa-sliders"></i> <span>Paramètres</span>
                     </a>
                 ` : `
                     <a href="#payslips" class="nav-link ${window.location.hash === '#payslips' ? 'active' : ''}">
-                        <i class="fa-solid fa-file-pdf"></i> <span>My Payslips</span>
+                        <i class="fa-solid fa-file-pdf"></i> <span>Mes fiches de paie</span>
                     </a>
                 `}
             </div>

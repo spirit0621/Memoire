@@ -5,12 +5,12 @@ export function renderPayslips(container) {
     container.innerHTML = `
         <div class="page-header" style="align-items: flex-start;">
             <div>
-                <h1 class="text-3xl font-bold">Payslips</h1>
-                <p class="text-slate-500 mt-1">Manage and generate official payslips by period.</p>
+                <h1 class="text-3xl font-bold">Fiches de paie</h1>
+                <p class="text-slate-500 mt-1">Gérer et générer les fiches de paie officielles par période.</p>
             </div>
             <div class="flex gap-2">
-                ${isRH ? `<button class="btn btn-primary" onclick="ui.openGenerateModal()"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate Payroll</button>` : ''}
-                ${isRH ? `<button class="btn-success" onclick="ui.downloadBatch()"><i class="fa-solid fa-file-zipper"></i> Download All (ZIP)</button>` : ''}
+                ${isRH ? `<button class="btn btn-primary" onclick="ui.openGenerateModal()"><i class="fa-solid fa-wand-magic-sparkles"></i> Générer la paie</button>` : ''}
+                ${isRH ? `<button class="btn-success" onclick="ui.downloadBatch()"><i class="fa-solid fa-file-zipper"></i> Tout télécharger (ZIP)</button>` : ''}
             </div>
         </div>
         
@@ -20,34 +20,34 @@ export function renderPayslips(container) {
                     <tr>
                         <th style="width: 250px;">
                             <div class="flex flex-col gap-1">
-                                <span>Employee</span>
-                                <input type="text" id="pay-filter-name" class="form-control form-control-sm" placeholder="Filter..." value="${state.filters.paySearch}">
+                                <span>Employé</span>
+                                <input type="text" id="pay-filter-name" class="form-control form-control-sm" placeholder="Filtrer..." value="${state.filters.paySearch}">
                             </div>
                         </th>
                         <th style="width: 180px;">
                             <div class="flex flex-col gap-1">
-                                <span>Establishment</span>
+                                <span>Établissement</span>
                                 <select id="pay-filter-est" class="form-control form-control-sm" style="height: 31px;">
-                                    <option value="all">All</option>
+                                    <option value="all">Tous</option>
                                     ${[...new Set(state.employees.map(e => e.establishment))].map(x => `<option value="${x}" ${state.filters.payEst === x ? 'selected' : ''}>${x}</option>`).join('')}
                                 </select>
                             </div>
                         </th>
                         <th style="width: 150px;">
                             <div class="flex flex-col gap-1">
-                                <span>Period</span>
-                                <input type="text" id="pay-filter-period" class="form-control form-control-sm" placeholder="e.g. January..." value="${state.filters.payPeriod}">
+                                <span>Période</span>
+                                <input type="text" id="pay-filter-period" class="form-control form-control-sm" placeholder="Ex: janvier..." value="${state.filters.payPeriod}">
                             </div>
                         </th>
                         <th style="width: 140px;">
                             <div class="flex flex-col gap-1 text-right">
-                                <span>Net Salary</span>
-                                <input type="text" id="pay-filter-net" class="form-control form-control-sm text-right" placeholder="Amount..." value="${state.filters.payNet}">
+                                <span>Salaire net</span>
+                                <input type="text" id="pay-filter-net" class="form-control form-control-sm text-right" placeholder="Montant..." value="${state.filters.payNet}">
                             </div>
                         </th>
                         <th style="width: 160px;">
                             <div class="flex flex-col gap-1">
-                                <span>Generated On</span>
+                                <span>Généré le</span>
                                 <input type="text" id="pay-filter-gendate" class="form-control form-control-sm" placeholder="Date..." value="${state.filters.payGenDate}">
                             </div>
                         </th>
@@ -59,8 +59,8 @@ export function renderPayslips(container) {
         </div>
         
         <div class="payslip-stats-row mt-4">
-            <div id="pay-count-info">Loading...</div>
-            <div class="italic text-slate-400 text-sm">Table updated in real-time based on filter criteria.</div>
+            <div id="pay-count-info">Chargement...</div>
+            <div class="italic text-slate-400 text-sm">Tableau mis à jour en temps réel selon les critères de filtre.</div>
         </div>
     `;
 
@@ -73,26 +73,26 @@ export function renderPayslips(container) {
             const estMatch = state.filters.payEst === 'all' || emp.establishment === state.filters.payEst;
             
             const date = new Date(p.period);
-            const periodStr = date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }).toLowerCase();
+            const periodStr = date.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }).toLowerCase();
             const periodMatch = periodStr.includes(state.filters.payPeriod.toLowerCase());
             
             const netStr = p.netSalary.toString();
             const netMatch = netStr.includes(state.filters.payNet);
 
-            const genDateStr = p.generationDate ? new Date(p.generationDate).toLocaleDateString('en-US') : '';
+            const genDateStr = p.generationDate ? new Date(p.generationDate).toLocaleDateString('fr-FR') : '';
             const genDateMatch = genDateStr.includes(state.filters.payGenDate);
 
             return nameMatch && estMatch && periodMatch && netMatch && genDateMatch;
         });
 
-        document.getElementById('pay-count-info').innerText = `${filtered.length} payslip(s) displayed`;
+        document.getElementById('pay-count-info').innerText = `${filtered.length} fiche(s) de paie affichée(s)`;
 
         document.getElementById('pay-table-body').innerHTML = filtered.map(p => {
             const emp = state.employees.find(e => e.id === p.employeeId);
             const date = new Date(p.period);
-            const periodStr = date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            const periodStr = date.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
             const capitalizedPeriod = periodStr.charAt(0).toUpperCase() + periodStr.slice(1);
-            const genDateStr = p.generationDate ? new Date(p.generationDate).toLocaleDateString('en-US') : 'N/A';
+            const genDateStr = p.generationDate ? new Date(p.generationDate).toLocaleDateString('fr-FR') : 'N/A';
 
             return `
                 <tr>
@@ -101,7 +101,7 @@ export function renderPayslips(container) {
                             <img src="${emp.avatar}" class="avatar avatar-xs">
                             <div>
                                 <div class="font-bold text-slate-800">${emp.firstName} ${emp.lastName}</div>
-                                <div class="text-[10px] text-slate-400 font-medium">${emp.nir || 'Unknown SSN'}</div>
+                                <div class="text-[10px] text-slate-400 font-medium">${emp.nir || 'NIR inconnu'}</div>
                             </div>
                         </div>
                     </td>
@@ -112,7 +112,7 @@ export function renderPayslips(container) {
                         <span class="font-medium text-slate-700">${capitalizedPeriod}</span>
                     </td>
                     <td class="text-right">
-                        <span class="font-black text-blue-600">${p.netSalary.toLocaleString('en-US', { minimumFractionDigits: 2 })} €</span>
+                        <span class="font-black text-blue-600">${p.netSalary.toLocaleString('fr-FR', { minimumFractionDigits: 2 })} €</span>
                     </td>
                     <td>
                         <div class="text-slate-500 text-sm flex items-center gap-1">
@@ -122,10 +122,10 @@ export function renderPayslips(container) {
                     </td>
                     <td>
                         <div class="flex gap-1 justify-center">
-                            <button class="btn btn-ghost btn-xs" onclick="ui.openPreviewModal(${p.employeeId}, '${capitalizedPeriod}')" title="View Details">
+                            <button class="btn btn-ghost btn-xs" onclick="ui.openPreviewModal(${p.employeeId}, '${capitalizedPeriod}')" title="Voir les détails">
                                 <i class="fa-solid fa-eye text-blue-500"></i>
                             </button>
-                            <button class="btn btn-ghost btn-xs" onclick="ui.downloadPDF(${p.id})" title="Download PDF">
+                            <button class="btn btn-ghost btn-xs" onclick="ui.downloadPDF(${p.id})" title="Télécharger le PDF">
                                 <i class="fa-solid fa-file-pdf text-red-500"></i>
                             </button>
                         </div>

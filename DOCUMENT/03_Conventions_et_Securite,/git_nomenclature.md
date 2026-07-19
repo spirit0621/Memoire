@@ -1,4 +1,9 @@
-# 🧩 Gestion des Branches et des Commits
+# 🧩 Stratégie Git et Conventions de Nommage
+
+## Sommaire
+- [🪄 Types de branches](#-types-de-branches)
+- [🌿 Nomenclature des Branches](#-nomenclature-des-branches)
+- [💬 Nomenclature des Commits](#-nomenclature-des-commits)
 
 ## 🪄 Types de branches
 

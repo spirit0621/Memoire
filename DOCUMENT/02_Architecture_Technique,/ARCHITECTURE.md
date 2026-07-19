@@ -1,5 +1,14 @@
 # Architecture Logicielle - Application Memoire
 
+## Sommaire
+- [1. Vue d'Ensemble Architecturale](#1-vue-densemble-architecturale)
+- [2. Structure des Composants Backend](#2-structure-des-composants-backend)
+- [3. Structure du Frontend](#3-structure-du-frontend)
+- [4. Flux d'Authentification](#4-flux-dauthentification)
+- [5. Flux de Création de Bulletin de Paie](#5-flux-de-création-de-bulletin-de-paie)
+- [6. Sécurité et Patterns](#6-sécurité-et-patterns)
+- [7. Base de Données - Relations](#7-base-de-données---relations)
+- [8. Performance et Optimisation](#8-performance-et-optimisation)
 ## 1. Vue d'Ensemble Architecturale
 
 ### 1.1 Pattern Architectural

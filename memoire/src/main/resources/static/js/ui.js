@@ -14,38 +14,38 @@ export const ui = {
     openEmployeeModal(id = null) {
         const emp = id ? state.employees.find(e => e.id === id) : null;
         const body = `
-            <div class="modal-section-title">Personal Information</div>
+            <div class="modal-section-title">Informations personnelles</div>
             <div class="grid grid-cols-2 gap-4 mb-4">
                 <div class="form-group">
-                    <label class="form-label">First Name <span class="text-red-500">*</span></label>
-                    <input type="text" id="m-fn" class="form-control" placeholder="First Name" value="${emp ? emp.firstName : ''}" required>
+                    <label class="form-label">Prénom <span class="text-red-500">*</span></label>
+                    <input type="text" id="m-fn" class="form-control" placeholder="Prénom" value="${emp ? emp.firstName : ''}" required>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Last Name <span class="text-red-500">*</span></label>
-                    <input type="text" id="m-ln" class="form-control" placeholder="Last Name" value="${emp ? emp.lastName : ''}" required>
+                    <label class="form-label">Nom <span class="text-red-500">*</span></label>
+                    <input type="text" id="m-ln" class="form-control" placeholder="Nom" value="${emp ? emp.lastName : ''}" required>
                 </div>
             </div>
             <div class="form-group">
-                <label class="form-label">Establishment <span class="text-red-500">*</span></label>
-                <input type="text" id="m-est" class="form-control" placeholder="Enter a new name or choose..." list="est-list" value="${emp ? emp.establishment : ''}">
+                <label class="form-label">Établissement <span class="text-red-500">*</span></label>
+                <input type="text" id="m-est" class="form-control" placeholder="Entrez un nouveau nom ou choisissez..." list="est-list" value="${emp ? emp.establishment : ''}">
                 <datalist id="est-list">${[...new Set(state.employees.map(e => e.establishment))].map(x => `<option value="${x}">`).join('')}</datalist>
-                <p class="text-xs text-slate-400 mt-1"><i class="fa-solid fa-circle-info"></i> Type a new name to create an establishment.</p>
+                <p class="text-xs text-slate-400 mt-1"><i class="fa-solid fa-circle-info"></i> Tapez un nouveau nom pour créer un établissement.</p>
             </div>
             <div class="form-group">
-                <label class="form-label">Group / Department <span class="text-red-500">*</span></label>
+                <label class="form-label">Groupe / Département <span class="text-red-500">*</span></label>
                 <select id="m-dept" class="form-control" required>
-                    <option value="">Select...</option>
+                    <option value="">Sélectionner...</option>
                     ${state.departments.map(d => `<option value="${d.name}" ${emp && emp.department === d.name ? 'selected' : ''}>${d.name}</option>`).join('')}
                 </select>
             </div>
 
-            <div class="modal-section-title">Base Compensation</div>
+            <div class="modal-section-title">Rémunération de base</div>
             <div class="form-group">
-                <label class="form-label">Base Salary (€) <span class="text-red-500">*</span></label>
+                <label class="form-label">Salaire de base (€) <span class="text-red-500">*</span></label>
                 <input type="number" id="m-sal" class="form-control" placeholder="0.00" value="${emp ? emp.baseSalary : '2500'}">
             </div>
 
-            <div class="modal-section-title">Variables and Bonuses (Fixed amounts)</div>
+            <div class="modal-section-title">Variables et Primes (Montants fixes)</div>
             <div id="employee-vars-container" class="var-card-list" style="max-height: 240px; overflow-y: auto; padding-right: 4px; margin-bottom: 1rem;">
                 ${state.variables.filter(v => v.type === 'fixed' && (emp && emp.customValues && emp.customValues[v.code] !== undefined)).map(v => `
                      <div class="var-card animate-fade-in" data-code="${v.code}">
@@ -62,18 +62,18 @@ export const ui = {
                     </div>
                 `).join('')}
                 ${(!emp || !emp.customValues || !Object.keys(emp.customValues).some(k => state.variables.find(v => v.code === k && v.type === 'fixed'))) ? 
-                    '<p id="no-var-msg" class="text-xs text-slate-400 italic p-4 text-center">No variables assigned.</p>' : ''}
+                    '<p id="no-var-msg" class="text-xs text-slate-400 italic p-4 text-center">Aucune variable assignée.</p>' : ''}
             </div>
 
             <div class="relative mb-8">
                 <button type="button" class="btn-add-var" id="add-var-trigger">
-                    <i class="fa-solid fa-plus"></i> Add a bonus
+                    <i class="fa-solid fa-plus"></i> Ajouter une prime
                 </button>
                 <div id="var-selection-menu" class="hidden card p-0 absolute bottom-full left-0 w-full mb-2 shadow-2xl border-blue-200 z-[100] overflow-hidden">
                     <div class="p-3 bg-slate-50 border-b border-slate-100">
                         <div class="relative">
                             <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-                            <input type="text" id="var-menu-search" class="form-control pl-9 text-xs py-2 h-auto" placeholder="Search for a bonus...">
+                            <input type="text" id="var-menu-search" class="form-control pl-9 text-xs py-2 h-auto" placeholder="Rechercher une prime...">
                         </div>
                     </div>
                     <div id="var-menu-items" class="max-h-[220px] overflow-y-auto p-1">
@@ -103,18 +103,18 @@ export const ui = {
                     </div>
                 `).join('')}
                 ${(!emp || !emp.customValues || !Object.keys(emp.customValues).some(k => state.variables.find(v => v.code === k && v.type === 'formula' && emp.customValues[k] === 1.0))) ? 
-                    '<p id="no-rule-msg" class="text-xs text-slate-400 italic p-4 text-center">No rules assigned.</p>' : ''}
+                    '<p id="no-rule-msg" class="text-xs text-slate-400 italic p-4 text-center">Aucune règle assignée.</p>' : ''}
             </div>
 
             <div class="relative mb-6">
                 <button type="button" class="btn-add-var" id="add-rule-trigger">
-                    <i class="fa-solid fa-plus"></i> Add a rule
+                    <i class="fa-solid fa-plus"></i> Ajouter une règle
                 </button>
                 <div id="rule-selection-menu" class="hidden card p-0 absolute bottom-full left-0 w-full mb-2 shadow-2xl border-blue-200 z-[100] overflow-hidden">
                     <div class="p-3 bg-slate-50 border-b border-slate-100">
                         <div class="relative">
                             <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-                            <input type="text" id="rule-menu-search" class="form-control pl-9 text-xs py-2 h-auto" placeholder="Search for a rule...">
+                            <input type="text" id="rule-menu-search" class="form-control pl-9 text-xs py-2 h-auto" placeholder="Rechercher une règle...">
                         </div>
                     </div>
                     <div id="rule-menu-items" class="max-h-[220px] overflow-y-auto p-1">
@@ -124,10 +124,10 @@ export const ui = {
             </div>
         `;
         const foot = `
-            <button class="btn btn-secondary" onclick="ui.closeModal()">Cancel</button>
-            <button class="btn btn-primary" id="m-sub" style="padding: 0.5rem 2rem;">${id ? 'Edit' : 'Save'}</button>
+            <button class="btn btn-secondary" onclick="ui.closeModal()">Annuler</button>
+            <button class="btn btn-primary" id="m-sub" style="padding: 0.5rem 2rem;">${id ? 'Modifier' : 'Enregistrer'}</button>
         `;
-        this.renderModal(id ? 'Edit Employee' : 'Add Employee', body, foot);
+        this.renderModal(id ? 'Modifier un employé' : 'Ajouter un employé', body, foot);
         
         // Modal Logic - Selection Menus
         const setupMenu = (triggerId, menuId, searchId, itemsId, type) => {
@@ -158,7 +158,7 @@ export const ui = {
                         <span class="text-[10px] font-mono bg-slate-100 group-hover:bg-blue-100 group-hover:text-blue-600 px-2 py-1 rounded text-slate-500">${v.code}</span>
                     </div>
                 `).join('');
-                if (available.length === 0) items.innerHTML = '<div class="p-4 text-center text-xs text-slate-400">No results</div>';
+                if (available.length === 0) items.innerHTML = '<div class="p-4 text-center text-xs text-slate-400">Aucun résultat</div>';
             };
 
             search.oninput = (e) => renderItems(e.target.value);
@@ -303,8 +303,8 @@ export const ui = {
                 </div>
             </div>
         `;
-        const foot = `<button class="btn btn-secondary" onclick="ui.closeModal()">Cancel</button><button class="btn btn-primary" id="v-sub">${id ? 'Edit' : 'Save'}</button>`;
-        this.renderModal(id ? 'Edit Variable' : 'New Variable', body, foot);
+        const foot = `<button class="btn btn-secondary" onclick="ui.closeModal()">Annuler</button><button class="btn btn-primary" id="v-sub">${id ? 'Modifier' : 'Enregistrer'}</button>`;
+        this.renderModal(id ? 'Modifier la variable' : 'Nouvelle variable', body, foot);
         
         // Helper List Population & Search
         const helperList = document.getElementById('v-helper-list');
@@ -514,21 +514,21 @@ export const ui = {
     openGenerateModal() {
         const body = `
             <div class="form-group">
-                <label class="form-label">Employee <span class="text-red-500">*</span></label>
+                <label class="form-label">Employé <span class="text-red-500">*</span></label>
                 <select id="g-emp" class="form-control">
                     ${state.employees.map(e => `<option value="${e.id}">${e.firstName} ${e.lastName}</option>`).join('')}
                 </select>
             </div>
             <div class="form-group">
-                <label class="form-label">Period <span class="text-red-500">*</span></label>
-                <input type="text" id="g-per" class="form-control" placeholder="e.g. May 2024" value="May 2024">
+                <label class="form-label">Période <span class="text-red-500">*</span></label>
+                <input type="text" id="g-per" class="form-control" placeholder="Ex: Mai 2024" value="Mai 2024">
             </div>
         `;
         const foot = `
-            <button class="btn btn-secondary" onclick="ui.closeModal()">Cancel</button>
-            <button class="btn btn-primary" id="g-sub">Preview</button>
+            <button class="btn btn-secondary" onclick="ui.closeModal()">Annuler</button>
+            <button class="btn btn-primary" id="g-sub">Aperçu</button>
         `;
-        this.renderModal('Generate a payslip', body, foot);
+        this.renderModal('Générer une fiche de paie', body, foot);
         
         document.getElementById('g-sub').onclick = () => {
             const empId = parseInt(document.getElementById('g-emp').value);

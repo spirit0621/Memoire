@@ -1,4 +1,11 @@
-# 📋 Actions Futures - Application Memoire
+# 📋 Actions Futures & Tâches à Réaliser
+
+## Sommaire
+- [📊 État Global (Progression : 25%)](#-état-global-progression--25)
+- [🎯 1. Priorités Absolues (Backend)](#-1-priorités-absolues-backend)
+- [🎨 2. Refactoring et Simplification UI (Frontend)](#-2-refactoring-et-simplification-ui-frontend)
+- [⚙️ 3. Tests & Déploiement](#-3-tests--déploiement)
+- [🚀 4. Évolutions Futures (Version 2.0)](#-4-évolutions-futures-version-20)
 
 ## 📊 État Global (Progression : 25%)
 - ✅ **18** Tâches complétées (Modèles JPA, Base de données, Structure de base)

@@ -1,4 +1,16 @@
-# Ressources et Références - Application Memoire
+# Ressources, Références et Outils - Application Memoire
+
+## Sommaire
+- [1. Documentation Officielle](#1-documentation-officielle)
+- [2. Outils de Développement](#2-outils-de-développement)
+- [3. Libraries & Dépendances Recommandées](#3-libraries--dépendances-recommandées)
+- [4. Patterns & Best Practices](#4-patterns--best-practices)
+- [5. Frameworks & Librairies Alternatives](#5-frameworks--librairies-alternatives)
+- [6. Tutoriels Recommandés](#6-tutoriels-recommandés)
+- [7. Ressources Communautaires](#7-ressources-communautaires)
+- [8. Checklist de Configuration Initiale](#8-checklist-de-configuration-initiale)
+- [9. Templates & Snippets](#9-templates--snippets)
+- [10. Performance Benchmarks (Cibles)](#10-performance-benchmarks-cibles)
 
 ## 1. Documentation Officielle
 
