@@ -31,7 +31,7 @@ export const api = {
     async fetchAll() {
         if (!state.user) return;
         try {
-            if (state.user.role === 'RH') {
+            if (state.user.role === 'ADMIN' || state.user.role === 'RH') {
                 const [emps, pays, vars, depts] = await Promise.all([
                     fetch('/api/employees').then(r => r.json()),
                     fetch('/api/payslips').then(r => r.json()),
@@ -45,7 +45,14 @@ export const api = {
             } else {
                 const pays = await fetch(`/api/payslips?employeeId=${state.user.employeeId}`).then(r => r.json());
                 state.payslips = pays;
-                // Fetch basic info for non-RH too if needed
+                // Injecter l'employé courant en local pour satisfaire le filtre du front-end
+                state.employees = [{
+                    id: state.user.employeeId,
+                    firstName: state.user.firstName,
+                    lastName: state.user.lastName,
+                    establishment: state.user.establishment || 'N/A',
+                    nir: state.user.nir || 'NIR Inconnu'
+                }];
             }
         } catch (e) {
             console.error('Error fetching data:', e);

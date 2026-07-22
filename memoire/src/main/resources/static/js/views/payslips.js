@@ -24,6 +24,7 @@ export function renderPayslips(container) {
                                 <input type="text" id="pay-filter-name" class="form-control form-control-sm" placeholder="Filtrer..." value="${state.filters.paySearch}">
                             </div>
                         </th>
+                        ${isRH ? `
                         <th style="width: 180px;">
                             <div class="flex flex-col gap-1">
                                 <span>Établissement</span>
@@ -31,6 +32,12 @@ export function renderPayslips(container) {
                                     <option value="all">Tous</option>
                                     ${[...new Set(state.employees.map(e => e.establishment))].map(x => `<option value="${x}" ${state.filters.payEst === x ? 'selected' : ''}>${x}</option>`).join('')}
                                 </select>
+                            </div>
+                        </th>
+                        ` : ''}
+                        <th style="width: 180px;">
+                            <div class="flex flex-col gap-1">
+                                <span>NIR (Sécurité Sociale)</span>
                             </div>
                         </th>
                         <th style="width: 150px;">
@@ -97,16 +104,15 @@ export function renderPayslips(container) {
             return `
                 <tr>
                     <td>
-                        <div class="flex items-center gap-3">
-                            <img src="${emp.avatar}" class="avatar avatar-xs">
-                            <div>
-                                <div class="font-bold text-slate-800">${emp.firstName} ${emp.lastName}</div>
-                                <div class="text-[10px] text-slate-400 font-medium">${emp.nir || 'NIR inconnu'}</div>
-                            </div>
-                        </div>
+                        <div class="font-bold text-slate-800">${emp.firstName} ${emp.lastName}</div>
                     </td>
+                    ${isRH ? `
                     <td>
                         <span class="badge badge-blue" style="font-size: 0.7rem;">${emp.establishment}</span>
+                    </td>
+                    ` : ''}
+                    <td>
+                        <div class="text-sm text-slate-600 font-medium">${emp.nir || 'NIR inconnu'}</div>
                     </td>
                     <td>
                         <span class="font-medium text-slate-700">${capitalizedPeriod}</span>
@@ -136,8 +142,12 @@ export function renderPayslips(container) {
     };
 
     // Event Listeners
-    document.getElementById('pay-filter-name').oninput = (e) => { state.filters.paySearch = e.target.value; update(); };
-    document.getElementById('pay-filter-est').onchange = (e) => { state.filters.payEst = e.target.value; update(); };
+    const filterName = document.getElementById('pay-filter-name');
+    if (filterName) filterName.oninput = (e) => { state.filters.paySearch = e.target.value; update(); };
+    
+    const filterEst = document.getElementById('pay-filter-est');
+    if (filterEst) filterEst.onchange = (e) => { state.filters.payEst = e.target.value; update(); };
+    
     document.getElementById('pay-filter-period').oninput = (e) => { state.filters.payPeriod = e.target.value; update(); };
     document.getElementById('pay-filter-net').oninput = (e) => { state.filters.payNet = e.target.value; update(); };
     document.getElementById('pay-filter-gendate').oninput = (e) => { state.filters.payGenDate = e.target.value; update(); };
