@@ -1,0 +1,35 @@
+<mxfile host="65bd71144e">
+    <diagram name="Bête à Cornes (Détaillé)" id="0">
+        <mxGraphModel dx="1042" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="A_qui" value="&lt;b style='font-size: 14px;'&gt;À qui rend-il service ?&lt;/b&gt;&lt;hr&gt;&lt;ul style='text-align: left;'&gt;&lt;li&gt;&lt;b&gt;Services RH :&lt;/b&gt; Gestion fluide et quotidienne&lt;/li&gt;&lt;li&gt;&lt;b&gt;Comptables :&lt;/b&gt; Exports fiables et vérifications&lt;/li&gt;&lt;li&gt;&lt;b&gt;Salariés :&lt;/b&gt; Transparence et justesse de la paie&lt;/li&gt;&lt;/ul&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=10;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="80" width="300" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="Sur_quoi" value="&lt;b style='font-size: 14px;'&gt;Sur quoi agit-il ?&lt;/b&gt;&lt;hr&gt;&lt;ul style='text-align: left;'&gt;&lt;li&gt;&lt;b&gt;Données contractuelles&lt;/b&gt; (Contrats, salaires de base)&lt;/li&gt;&lt;li&gt;&lt;b&gt;Variables mensuelles&lt;/b&gt; (Absences, primes)&lt;/li&gt;&lt;li&gt;&lt;b&gt;Cadre légal&lt;/b&gt; (Cotisations sociales, impôts)&lt;/li&gt;&lt;/ul&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacingTop=10;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="80" width="300" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="Produit" value="&lt;b style='font-size: 16px;'&gt;Application GFPS&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Gestion de Fiches de Paie Simplifiée)&lt;/i&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;perimeterSpacing=2;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="300" width="280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="Dans_quel_but" value="&lt;b style='font-size: 14px;'&gt;Dans quel but ?&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align: left; padding: 0 10px;'&gt;- &lt;b&gt;Automatiser&lt;/b&gt; la génération des fiches de paie pour un gain de temps.&lt;br&gt;- &lt;b&gt;Garantir la conformité légale&lt;/b&gt; en automatisant les calculs complexes (brut/net, charges).&lt;br&gt;- &lt;b&gt;Centraliser&lt;/b&gt; les informations multi-établissements sans utiliser de multiples fichiers.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=10;verticalAlign=top;spacingTop=10;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="520" width="600" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="A_qui" target="Produit" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Sur_quoi" target="Produit" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge3" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;" parent="1" source="Produit" target="Dans_quel_but" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

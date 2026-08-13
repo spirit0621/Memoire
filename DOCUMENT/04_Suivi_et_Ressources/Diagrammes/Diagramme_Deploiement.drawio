@@ -1,0 +1,94 @@
+<mxfile host="Electron" modified="2026-07-21T00:00:00.000Z" agent="Mozilla/5.0" version="21.6.8" type="device">
+  <diagram id="deploiement" name="Diagramme Déploiement">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Node Client -->
+        <mxCell id="node_client" value="&amp;laquo;device&amp;raquo;&#10;&lt;b&gt;Poste Client (Employé / Admin)&lt;/b&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=0;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="260" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="env_nav" value="&amp;laquo;execution environment&amp;raquo;&#10;Navigateur Web" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="node_client">
+          <mxGeometry x="30" y="40" width="200" height="130" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="art_spa" value="&amp;laquo;artifact&amp;raquo;&#10;Application SPA (HTML/JS)" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="env_nav">
+          <mxGeometry x="20" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Node Serveur App -->
+        <mxCell id="node_server" value="&amp;laquo;device&amp;raquo;&#10;&lt;b&gt;Serveur d&#39;Application (Monolithe)&lt;/b&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=0;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="460" y="140" width="280" height="240" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="env_jvm" value="&amp;laquo;execution environment&amp;raquo;&#10;JRE / Serveur Tomcat (Spring Boot)" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="node_server">
+          <mxGeometry x="30" y="40" width="220" height="170" as="geometry" />
+        </mxCell>
+
+        <mxCell id="art_jar" value="&amp;laquo;artifact&amp;raquo;&#10;memoire-app.jar" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=15;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="env_jvm">
+          <mxGeometry x="30" y="40" width="160" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="comp_api" value="&amp;laquo;component&amp;raquo;&#10;API REST (Controllers/Services)" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="env_jvm">
+          <mxGeometry x="30" y="100" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="comp_api_shape" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="comp_api">
+          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+            <mxPoint x="-27" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Node DB -->
+        <mxCell id="node_db" value="&amp;laquo;device&amp;raquo;&#10;&lt;b&gt;Serveur de Base de Données&lt;/b&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=0;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="860" y="160" width="240" height="200" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="env_sgbd" value="&amp;laquo;execution environment&amp;raquo;&#10;SGBD (MySQL / PostgreSQL)" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="node_db">
+          <mxGeometry x="30" y="40" width="180" height="130" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="comp_db" value="&amp;laquo;database&amp;raquo;&#10;memoire_db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="env_sgbd">
+          <mxGeometry x="40" y="40" width="100" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="link_http" value="HTTPS / REST JSON&lt;br&gt;&lt;b&gt;(Port 8080)&lt;/b&gt;" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="node_client" target="node_server">
+          <mxGeometry y="20" width="50" height="50" relative="1" as="geometry">
+             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="link_jdbc" value="TCP / JDBC&lt;br&gt;&lt;b&gt;(Port 3306)&lt;/b&gt;" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="node_server" target="node_db">
+          <mxGeometry y="-20" width="50" height="50" relative="1" as="geometry">
+             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend Box -->
+        <mxCell id="legend_group" value="Légende UML" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="420" width="450" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- Legend Items -->
+        <mxCell id="legend1" value="  &amp;laquo;device&amp;raquo; : Nœud matériel physique ou machine virtuelle" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="legend_group">
+          <mxGeometry y="30" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2" value="  &amp;laquo;execution environment&amp;raquo; : Conteneur logiciel (ex: Navigateur, JRE)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="legend_group">
+          <mxGeometry y="60" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3" value="  &amp;laquo;artifact&amp;raquo; : Fichier déployé (ex: .jar, fichiers statiques JS/HTML)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="legend_group">
+          <mxGeometry y="90" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend4" value="  &amp;laquo;component&amp;raquo; : Composant d'architecture logicielle" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="legend_group">
+          <mxGeometry y="120" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend5" value="  &amp;laquo;database&amp;raquo; : Instance de stockage de données" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="legend_group">
+          <mxGeometry y="150" width="450" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

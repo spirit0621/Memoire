@@ -1,0 +1,28 @@
+<mxfile version="21.6.8" type="device">
+  <diagram name="Dashboard">
+    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1000" height="600" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Navbar: Accueil | Employés | Fiches de paie | Paramètres" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1000" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Bannière: Bonjour Alice (Gérer employés, etc.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="920" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="KPI: Effectif Total" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="440" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="KPI: Masse Salariale" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="300" width="440" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="Actions rapides (Boutons: Ajouter, Générer, Paramètres)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="920" height="150" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

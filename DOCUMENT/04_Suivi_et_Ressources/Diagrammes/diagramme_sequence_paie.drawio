@@ -1,0 +1,83 @@
+<mxfile version="21.6.8" type="device">
+  <diagram name="Sequence Paie">
+    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Lifelines -->
+        <mxCell id="2" value="Admin RH" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="100" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="PayrollController" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="120" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="PayrollService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="560" y="80" width="120" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="800" y="80" width="100" height="500" as="geometry"/>
+        </mxCell>
+
+        <!-- Messages -->
+        <mxCell id="6" value="1. Clic 'Générer' (Période)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="160"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="7" value="2. generatePayslips(period)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="200"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="8" value="3. Fetch Active Employees" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="240"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="9" value="4. Return Employee List" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1" source="5" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="280"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="10" value="5. Calcul (Brut -> Net)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1" source="4" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="320"/>
+              <mxPoint x="650" y="340"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="11" value="6. Save Payslips" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="380"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="12" value="7. 200 OK (Success)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1" source="3" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="440"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

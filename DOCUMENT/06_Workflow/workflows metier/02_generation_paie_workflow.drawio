@@ -1,0 +1,67 @@
+<mxfile host="65bd71144e">
+    <diagram id="paie-workflow" name="Paie Workflow">
+        <mxGraphModel dx="820" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="n1" value="Admin sur Fiches de paie" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="30" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n2" value="Clic 'Générer une fiche'" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="30" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n3" value="Ouverture Modale" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="30" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n4" value="Saisie Informations" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="30" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n5" value="Clic 'Générer'" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="660" y="120" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n6" value="Appel API Calcul" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="120" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n7" value="Affichage Preview PDF" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="120" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n8" value="Action Admin" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="220" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="n9" value="Télécharger PDF" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="90" y="310" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="n10" value="Valider et Fermer" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="310" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n1" target="n2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n2" target="n3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n3" target="n4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n4" target="n5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n5" target="n6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n6" target="n7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n7" target="n8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n8" target="n9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="n8" target="n10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

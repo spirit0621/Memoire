@@ -41,7 +41,7 @@
     - [ ] Contrôleur : Faire la somme des montants.
 
 - [ ] **Feature Bulletin de paie (Epic #25)**
-  - [ ] Créer une seed : plusieurs bulletins de paie pour l'utilisateur BOB (#26)
+- [x] Créer une seed : plusieurs bulletins de paie pour l'utilisateur BOB (#26)
   - [ ] **Affichage bulletin côté employé (#27) :**
     - [ ] Créer un contrôleur (Argument : utilisateur).
     - [ ] Retour : Liste d'éléments à définir.
@@ -62,7 +62,7 @@
 
 ## 🎨 2. Refactoring et Simplification UI (Frontend)
 
-- [ ] 🇬🇧 **Général :** Traduire l'ensemble de l'interface en anglais.
+- [x] 🇫🇷 **Général :** Traduire l'ensemble de l'interface en français (terminé).
 - [ ] 🗑️ **Général :** Supprimer le simulateur.
 - [ ] 🧹 **Nettoyage Dashboard Admin :**
   - [ ] Enlever la case "Heures supplémentaires".
@@ -95,4 +95,6 @@
 - [ ] 📊 Module d'analyse avancée et de prévisions.
 
 ---
-*Dernière mise à jour : 2026-07-04*
+*Dernière mise à jour : 2026-07-20*
+
+[⬅️ Retour à l'Index principal](../INDEX.md)

@@ -16,8 +16,10 @@ export function renderNavbar() {
     nav.innerHTML = `
         <div class="navbar-inner">
             <a href="#dashboard" class="nav-brand">
-                <div class="nav-brand-icon"><i class="fa-solid fa-calculator"></i></div>
-                <span>GFPS <span style="color:#60a5fa"></span></span>
+                <div class="nav-brand-icon" style="background: transparent; width: 3.5rem; height: 3.5rem;">
+                    <img src="/images/symbole-GFPS.png" alt="Symbole GFPS" style="width: 100%; height: 100%; object-fit: contain;" />
+                </div>
+                <span>GFPS</span>
             </a>
             <div class="nav-links">
                 <a href="#dashboard" class="nav-link ${window.location.hash === '#dashboard' ? 'active' : ''}">

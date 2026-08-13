@@ -1,0 +1,76 @@
+<mxfile host="65bd71144e">
+    <diagram name="Diagramme de Classe" id="0">
+        <mxGraphModel dx="997" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="user" value="&lt;b&gt;User&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ firstName: String&lt;br&gt;+ lastName: String&lt;br&gt;+ email: String&lt;br&gt;+ role: String&lt;br&gt;+ nsc: String&lt;br&gt;+ iban: String&lt;br&gt;+ address: String&lt;br&gt;+ city: String&lt;br&gt;+ zipCode: String&lt;br&gt;+ taxRate: BigDecimal" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="50" width="220" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="establishment" value="&lt;b&gt;Establishment&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ name: String&lt;br&gt;+ siret: String&lt;br&gt;+ address: String&lt;br&gt;+ city: String&lt;br&gt;+ zipCode: String" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="95" width="220" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="leaveBalance" value="&lt;b&gt;LeaveBalance&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ periodYear: String&lt;br&gt;+ acquired: BigDecimal&lt;br&gt;+ taken: BigDecimal&lt;br&gt;+ remaining: BigDecimal" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="50" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="absence" value="&lt;b&gt;Absence&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ startDate: LocalDate&lt;br&gt;+ endDate: LocalDate&lt;br&gt;+ type: String&lt;br&gt;+ status: String" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="210" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="contract" value="&lt;b&gt;Contract&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ startDate: LocalDate&lt;br&gt;+ endDate: LocalDate&lt;br&gt;+ contractType: String&lt;br&gt;+ baseSalary: BigDecimal&lt;br&gt;+ status: String" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="380" width="220" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="position" value="&lt;b&gt;Position&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ title: String&lt;br&gt;+ description: String&lt;br&gt;+ minSalary: BigDecimal&lt;br&gt;+ maxSalary: BigDecimal" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="380" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="payslip" value="&lt;b&gt;Payslip&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ periodMonthYear: String&lt;br&gt;+ baseSalary: BigDecimal&lt;br&gt;+ totalGross: BigDecimal&lt;br&gt;+ totalNet: BigDecimal&lt;br&gt;+ status: String&lt;br&gt;+ generationDate: LocalDateTime" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="600" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="payslipLine" value="&lt;b&gt;PayslipLine&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ code: String&lt;br&gt;+ label: String&lt;br&gt;+ lineType: String&lt;br&gt;+ baseCalculation: BigDecimal&lt;br&gt;+ employeeRate: BigDecimal&lt;br&gt;+ employeeAmount: BigDecimal&lt;br&gt;+ employerRate: BigDecimal&lt;br&gt;+ employerAmount: BigDecimal" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="600" width="220" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="payrollElement" value="&lt;b&gt;PayrollElement&lt;/b&gt;&lt;hr&gt;+ id: Integer&lt;br&gt;+ code: String&lt;br&gt;+ label: String&lt;br&gt;+ elementType: String&lt;br&gt;+ inputType: String&lt;br&gt;+ value: String&lt;br&gt;+ quantity: BigDecimal&lt;br&gt;+ startDate: LocalDate&lt;br&gt;+ endDate: LocalDate" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacing=10;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="600" width="220" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="user" target="establishment" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="user" target="leaveBalance" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="user" target="absence" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="user" target="contract" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="contract" target="position" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="payslip" target="user" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="payslip" target="contract" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="payslip" target="payslipLine" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="payslip" target="payrollElement" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="620" y="680"/>
+                            <mxPoint x="620" y="695"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" parent="1" source="contract" target="payrollElement" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="860" y="450"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

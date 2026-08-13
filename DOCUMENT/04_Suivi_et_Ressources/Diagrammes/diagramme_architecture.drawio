@@ -1,0 +1,112 @@
+<mxfile host="65bd71144e">
+    <diagram id="2" name="Architecture Détaillée">
+        <mxGraphModel dx="926" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="600" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="10" value="Architecture Applicative (Composants et Fichiers)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="20" width="600" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#ced4da;dashed=1;strokeWidth=2;align=center;verticalAlign=top;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="100" width="240" height="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Client (Navigateur Web)" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="100" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;b style=&quot;font-size:16px;&quot;&gt;Dossier: static/&lt;/b&gt;&lt;hr&gt;Index.html&lt;br&gt;Style.css&lt;br&gt;App.js" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=2;align=center;verticalAlign=middle;fontColor=#333333;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="200" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#ced4da;dashed=1;strokeWidth=2;align=center;verticalAlign=top;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="80" width="300" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Serveur Applicatif (Spring Boot)" style="text;html=1;strokeColor=none;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="80" width="300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;b style=&quot;font-size:14px;&quot;&gt;controller/&lt;/b&gt;&lt;hr style=&quot;margin:5px 0;&quot;&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;API REST / HTTP&lt;/span&gt;" style="shape=component;align=center;verticalAlign=middle;html=1;boundedLbl=1;fillColor=#ffffff;strokeColor=#82b366;strokeWidth=2;fontColor=#333333;shadow=1;spacingLeft=30;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="160" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;b style=&quot;font-size:14px;&quot;&gt;service/&lt;/b&gt;&lt;hr style=&quot;margin:5px 0;&quot;&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;Logique Métier&lt;/span&gt;" style="shape=component;align=center;verticalAlign=middle;html=1;boundedLbl=1;fillColor=#ffffff;strokeColor=#82b366;strokeWidth=2;fontColor=#333333;shadow=1;spacingLeft=30;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="260" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;b style=&quot;font-size:14px;&quot;&gt;repository/&lt;/b&gt;&lt;hr style=&quot;margin:5px 0;&quot;&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;Accès aux Données (JPA)&lt;/span&gt;" style="shape=component;align=center;verticalAlign=middle;html=1;boundedLbl=1;fillColor=#ffffff;strokeColor=#82b366;strokeWidth=2;fontColor=#333333;shadow=1;spacingLeft=30;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="360" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="seed_component" value="&lt;b style=&quot;font-size:14px;&quot;&gt;seed/&lt;/b&gt;&lt;hr style=&quot;margin:5px 0;&quot;&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;Initialisation et Fausses Données&lt;/span&gt;" style="shape=component;align=center;verticalAlign=middle;html=1;boundedLbl=1;fillColor=#ffffff;strokeColor=#82b366;strokeWidth=2;fontColor=#333333;shadow=1;spacingLeft=30;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="460" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#ced4da;dashed=1;strokeWidth=2;align=center;verticalAlign=top;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="100" width="240" height="460" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Base de Données (MySQL)" style="text;html=1;strokeColor=none;fillColor=#fff2cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="100" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;b style=&quot;font-size:15px;&quot;&gt;Données SQL&lt;/b&gt;&lt;hr&gt;Tables et Vues" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#d6b656;strokeWidth=2;align=center;verticalAlign=middle;shadow=1;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="870" y="210" width="140" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=3;endArrow=classic;curved=1;" parent="1" source="13" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="350" y="260"/>
+                            <mxPoint x="350" y="195"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="23" value="&lt;b&gt;HTTP(S) / JSON&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#6c8ebf;labelBackgroundColor=#ffffff;" parent="22" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=3;endArrow=classic;" parent="1" source="16" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82b366;strokeWidth=3;endArrow=classic;" parent="1" source="17" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=3;endArrow=classic;curved=1;" parent="1" source="18" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="760" y="395"/>
+                            <mxPoint x="760" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="&lt;b&gt;Connexion JDBC&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#d6b656;labelBackgroundColor=#ffffff;" parent="26" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_seed_db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=3;endArrow=classic;curved=1;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="seed_component" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="730" y="495"/>
+                            <mxPoint x="730" y="380"/>
+                            <mxPoint x="800" y="380"/>
+                            <mxPoint x="800" y="275"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_seed" value="&lt;b&gt;Injection des Seeds&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#d6b656;labelBackgroundColor=#ffffff;" parent="edge_seed_db" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rev_bdd_srv" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#d6b656;strokeWidth=2;endArrow=classic;dashed=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="21" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_rev_bdd_srv" value="&lt;b&gt;Résultats SQL / Entités JPA&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#d6b656;labelBackgroundColor=#ffffff;" parent="rev_bdd_srv" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="rev_srv_cli" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#6c8ebf;strokeWidth=2;endArrow=classic;dashed=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="16" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_rev_srv_cli" value="&lt;b&gt;Réponse JSON / DTO HTTP&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#6c8ebf;labelBackgroundColor=#ffffff;" parent="rev_srv_cli" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="79" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

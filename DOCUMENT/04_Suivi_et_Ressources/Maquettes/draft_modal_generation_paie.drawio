@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram name="Modale Generation Paie" id="0">
+        <mxGraphModel dx="547" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="160" width="500" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Titre: Générer les fiches de paie" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="320" y="180" width="300" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="X" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="185" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="line;strokeWidth=2;html=1;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="220" width="500" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Information: La génération calculera le salaire net pour tous les employés actifs sur la période sélectionnée." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="240" width="440" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Dropdown: Sélectionner la période (ex: Juillet 2026)" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="300" width="440" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Dropdown: Établissement (Optionnel)" style="rounded=1;whiteSpace=wrap;html=1;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="360" width="440" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="line;strokeWidth=2;html=1;strokeColor=#cccccc;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="420" width="500" height="10" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Bouton: Annuler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="450" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Bouton: Lancer la génération" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="450" width="120" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

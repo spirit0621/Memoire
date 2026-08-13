@@ -1,0 +1,26 @@
+WBS;TASK;LEAD;START;END;DAYS;% DONE;WORK DAYS
+1;[Phase 1: Cadrage & Analyse];;;;;;
+1.1;Analyse de l'existant;Victor;01/12/2025;30/12/2025;30;0%;22
+1.2;Recueil des besoins A-MOA;Victor;01/01/2026;20/01/2026;20;0%;14
+1.3;Rédaction cahier des charges;Victor;21/01/2026;04/02/2026;15;0%;11
+2;[Phase 2: Conception];;;;;;
+2.1;Modélisation BDD (MySQL);Victor;05/02/2026;19/02/2026;15;0%;11
+2.2;Choix architecture (Spring Boot);Victor;20/02/2026;01/03/2026;10;0%;7
+2.3;Maquettage UX/UI;Victor;02/03/2026;16/03/2026;15;0%;11
+3;[Phase 3: Développement (BUILD)];;;;;;
+3.1;Développement Modèles & JPA;Victor;17/03/2026;05/04/2026;20;0%;14
+3.2;Implémentation Sécurité (JWT);Victor;06/04/2026;20/04/2026;15;0%;11
+3.3;Développement Moteur de Paie;Victor;21/04/2026;20/05/2026;30;0%;22
+3.4;Développement des API REST;Victor;21/05/2026;09/06/2026;20;0%;14
+4;[Phase 4: Tests & Intégration];;;;;;
+4.1;Tests unitaires et d'intégration;Victor;10/06/2026;29/06/2026;20;0%;14
+4.2;Correction des anomalies;Victor;30/06/2026;14/07/2026;15;0%;11
+5;[Phase 5: Validation (RUN / PoC)];;;;;;
+5.1;Déploiement en pré-prod;Victor;15/07/2026;24/07/2026;10;0%;7
+5.2;Présentation & Feedback Métier;Victor;25/07/2026;08/08/2026;15;0%;11
+5.3;Ajustements finaux;Victor;09/08/2026;18/08/2026;10;0%;7
+6;[Phase 6: Mémoire & Soutenance];;;;;;
+6.1;Rédaction des chapitres 1 & 2;Victor;15/01/2026;28/02/2026;45;0%;32
+6.2;Rédaction chapitres techniques;Victor;01/05/2026;14/06/2026;45;0%;32
+6.3;Relecture et finalisation;Victor;01/08/2026;20/08/2026;20;0%;14
+6.4;Préparation de la soutenance;Victor;21/08/2026;30/08/2026;10;0%;7

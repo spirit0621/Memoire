@@ -16,14 +16,12 @@
   padding: 2.5rem 2rem;
 }
 .login-logo {
-  width: 4rem;
-  height: 4rem;
-  background: var(--blue-50);
-  color: var(--blue-600);
-  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 14rem;
+  height: auto;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
   margin: 0 auto 1.5rem;
 }

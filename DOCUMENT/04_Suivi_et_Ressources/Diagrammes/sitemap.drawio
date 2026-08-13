@@ -1,0 +1,104 @@
+<mxfile host="65bd71144e">
+    <diagram id="sitemap-diagram" name="Sitemap">
+        <mxGraphModel dx="864" dy="484" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="800" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="Login" value="&lt;b&gt;Login&lt;/b&gt;&lt;br&gt;/login&lt;br&gt;&lt;i&gt;(Tous)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="30" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="Dash" value="&lt;b&gt;Dashboard&lt;/b&gt;&lt;br&gt;/dashboard&lt;br&gt;&lt;i&gt;(ADMIN, Employé)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="50" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.364;entryY=-0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Emp" target="AddEmp">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="Emp" value="&lt;b&gt;Employees&lt;/b&gt;&lt;br&gt;/employees&lt;br&gt;&lt;i&gt;(ADMIN)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="170" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="Legend" value="&lt;b&gt;Légende d'accès&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: #f5f5f5; border: 1px solid #666666; padding: 2px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt; Accès Public (Tous)&lt;br&gt;&lt;span style=&quot;background-color: #dae8fc; border: 1px solid #6c8ebf; padding: 2px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt; ADMIN &amp;amp; Employé&lt;br&gt;&lt;span style=&quot;background-color: #f8cecc; border: 1px solid #b85450; padding: 2px;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/span&gt; ADMIN uniquement&lt;/div&gt;" style="text;html=1;strokeColor=#cccccc;fillColor=#ffffff;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="180" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="AddEmp" value="Ajouter un employé&lt;br&gt;(Modal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="290" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="EditEmp" value="Modifier un employé&lt;br&gt;(Modal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="270" y="290" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="Pay" value="&lt;b&gt;Payslips&lt;/b&gt;&lt;br&gt;/payslips&lt;br&gt;&lt;i&gt;(ADMIN, Employé)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="170" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="GenPay" value="Générer une fiche&lt;br&gt;(Modal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="290" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="PreviewPay" value="Live Preview / PDF&lt;br&gt;(Modal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="290" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="Set" value="&lt;b&gt;Settings&lt;/b&gt;&lt;br&gt;/settings&lt;br&gt;&lt;i&gt;(ADMIN)&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="170" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="AddVar" value="Nouvelle variable&lt;br&gt;(Modal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="290" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="EditVar" value="Modifier variable&lt;br&gt;(Modal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="290" width="110" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="Login" target="Dash" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="580" y="130" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="590" y="85"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="Login" target="Emp" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="580.0769230769229" y="200" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="650" y="150"/>
+                            <mxPoint x="355" y="150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Login" target="Pay" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="580.0769230769229" y="200" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="650" y="150"/>
+                            <mxPoint x="515" y="150"/>
+                        </Array>
+                        <mxPoint x="700" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Login" target="Set" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="640.0000000000002" y="170" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="650" y="150"/>
+                            <mxPoint x="735" y="150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="Emp" target="EditEmp" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="325" y="240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Pay" target="GenPay" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Pay" target="PreviewPay" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Set" target="AddVar" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Set" target="EditVar" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

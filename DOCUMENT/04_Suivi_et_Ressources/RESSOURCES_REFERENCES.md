@@ -357,4 +357,6 @@ async function fetchData(url, options = {}) {
 
 ---
 
-*Dernière mise à jour: 2026-07-03*
+*Dernière mise à jour: 2026-07-20*
+
+[⬅️ Retour à l'Index principal](../INDEX.md)

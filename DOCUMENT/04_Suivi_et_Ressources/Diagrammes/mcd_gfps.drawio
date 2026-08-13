@@ -1,0 +1,76 @@
+<mxfile host="Electron" modified="2026-07-26T12:00:00.000Z" agent="Mozilla/5.0" version="22.1.2" type="device">
+  <diagram id="mcd-diagram" name="MCD">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Entities -->
+        <mxCell id="Establishment" value="&lt;b&gt;Establishment&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;name&lt;br&gt;siret&lt;br&gt;address&lt;br&gt;urssafCode" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#dae8fc;strokeColor=#6c8ebf;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="160" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="User" value="&lt;b&gt;User&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;firstName&lt;br&gt;lastName&lt;br&gt;email&lt;br&gt;role&lt;br&gt;nsc&lt;br&gt;iban&lt;br&gt;address" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#d5e8d4;strokeColor=#82b366;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="160" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="Absence" value="&lt;b&gt;Absence&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;startDate&lt;br&gt;endDate&lt;br&gt;reason&lt;br&gt;status" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="650" y="50" width="160" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="LeaveBalance" value="&lt;b&gt;LeaveBalance&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;leaveType&lt;br&gt;acquired&lt;br&gt;taken&lt;br&gt;balance" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="280" width="160" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="Contract" value="&lt;b&gt;Contract&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;startDate&lt;br&gt;endDate&lt;br&gt;contractType&lt;br&gt;baseSalary&lt;br&gt;status" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="350" y="280" width="160" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="Position" value="&lt;b&gt;Position&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;title&lt;br&gt;description&lt;br&gt;minSalary&lt;br&gt;maxSalary" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="650" y="280" width="160" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="Payslip" value="&lt;b&gt;Payslip&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;periodMonthYear&lt;br&gt;baseSalary&lt;br&gt;totalGross&lt;br&gt;totalNet&lt;br&gt;generationDate" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#9673a6;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="350" y="520" width="160" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="PayslipLine" value="&lt;b&gt;PayslipLine&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;code&lt;br&gt;label&lt;br&gt;employeeAmount&lt;br&gt;employerAmount" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#9673a6;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="50" y="520" width="160" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="PayrollElement" value="&lt;b&gt;PayrollElement&lt;/b&gt;&lt;hr&gt;id (PK)&lt;br&gt;code&lt;br&gt;label&lt;br&gt;value&lt;br&gt;startDate&lt;br&gt;endDate" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#e1d5e7;strokeColor=#9673a6;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="650" y="520" width="160" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" value="Emploie" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="User" target="Establishment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="Possède" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="Contract" target="User">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="Déclare" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="Absence" target="User">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="Cumule" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="LeaveBalance" target="User">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="Définit" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="Contract" target="Position">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="Reçoit" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="Payslip" target="User">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="Lié à" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="Payslip" target="Contract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="Contient" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="PayslipLine" target="Payslip">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="Inclut" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;startArrow=classic;" edge="1" parent="1" source="PayrollElement" target="Contract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

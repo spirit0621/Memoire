@@ -276,10 +276,8 @@ Livrable: Document, code, ou fonctionnalité prêt pour livraison.
 
 ### 5.2 Rôles Utilisateur
 
-- **ADMIN:** Administrateur système
-- **MANAGER:** Manager d'équipe
+- **ADMIN:** Administrateur système (RH)
 - **EMPLOYEE:** Employé standard
-- **PAYROLL:** Responsable paie
 
 ### 5.3 Types de Contrat
 
@@ -400,4 +398,6 @@ Nombre de requêtes traitées par unité de temps.
 
 ---
 
-*Dernière mise à jour: 2026-07-03*
+*Dernière mise à jour: 2026-07-20*
+
+[⬅️ Retour à l'Index principal](../INDEX.md)
