@@ -52,11 +52,15 @@ public class ApiController {
 
     @GetMapping("/payslips")
     public List<PayslipDto> getPayslips(@RequestParam(required = false) Integer employeeId) {
-        List<Payslip> all = StreamSupport.stream(payslipRepository.findAll().spliterator(), false)
-                .collect(Collectors.toList());
+        List<Payslip> payslips;
+        if (employeeId != null) {
+            payslips = payslipRepository.findByUserId(employeeId);
+        } else {
+            payslips = StreamSupport.stream(payslipRepository.findAll().spliterator(), false)
+                    .collect(Collectors.toList());
+        }
 
-        return all.stream()
-                .filter(p -> employeeId == null || (p.getUser() != null && p.getUser().getId().equals(employeeId)))
+        return payslips.stream()
                 .map(p -> {
                     // Convert "04-2025" to "2025-04-01" so JS new Date() parses it correctly
                     String period = p.getPeriodMonthYear();
