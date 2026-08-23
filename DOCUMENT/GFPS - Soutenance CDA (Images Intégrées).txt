@@ -1,9 +1,11 @@
-              Le projet GFPS
+            Le projet GFPS
 Génération de Fiches de Paie Simplifiées
 Soutenance CDA : Concepteur Développeur d'Applications
 Présenté par : Victor Alves Fernandes
 Entreprise d'accueil : Eiffage | Année : 2025-2026
-Bonjour à tous et merci d'être présents pour ma soutenance du titre de Concepteur Développeur d'Applications. Je m'appelle Victor Alves Fernandes et je vais vous présenter aujourd'hui mon projet de fin d'études : le projet GFPS, qui signifie "Génération de Fiches de Paie Simplifiées". 
+1
+« Bonjour à tous et merci d'être présents pour ma soutenance du titre de Concepteur Développeur d'Applications. 
+Je m'appelle Victor Alves Fernandes et je vais vous présenter aujourd'hui mon projet de fin d'études : le projet GFPS, qui signifie "Génération de Fiches de Paie Simplifiées". 
 C'est un projet que j'ai mené de bout en bout dans le cadre de mon alternance au sein de l'entreprise Eiffage pour l'année 2025-2026. »
 
 
@@ -20,36 +22,28 @@ Code, Sécurité et CI/CD.
 Bilan
 Validation et perspectives IA.
 Au programme aujourd'hui
+2
 : « Pour cette présentation, nous suivrons le cheminement logique du projet. Nous commencerons par le contexte de l'entreprise et mon rôle, puis nous analyserons l'existant qui a motivé ce projet. 
 Ensuite, nous aborderons la conception fonctionnelle et ergonomique, suivie de la modélisation de la base de données. 
 Enfin, nous plongerons dans la réalisation technique, la sécurité et le déploiement, avant de conclure sur un bilan de mes compétences et les perspectives d'avenir. »
 
 
-Une double démarche
-Ce projet s'inscrit au carrefour de deux exigences majeures :
-Réalisé dans le cadre de mon alternance au sein du service A-MOA d’Eiffage.
-Validation intégrale des compétences exigées par le cursus Concepteur Développeur d'Applications (CDA).
-Le constat initial
-Le projet GFPS est né d'un besoin terrain critique :
-Une nécessité absolue de fiabilisation et de centralisation des données RH.
-La volonté de créer un Proof of Concept (PoC) pour démontrer la faisabilité d'une modernisation interne.
 Avant-propos et Contexte
+3
 Une double démarche
 Ce projet s'inscrit au carrefour de deux exigences majeures :
 Réalisé dans le cadre de mon alternance au sein du service A-MOA d’Eiffage.
 Validation intégrale des compétences exigées par le cursus Concepteur Développeur d'Applications (CDA).
 
 
-Le constat initial
-Le projet GFPS est né d'un besoin terrain critique :
-Une nécessité absolue de fiabilisation et de centralisation des données RH.
-La volonté de créer un Proof of Concept (PoC) pour démontrer la faisabilité d'une modernisation interne.
+
 
 Le Groupe Eiffage
 Leader européen du BTP
 80 000 collaborateurs
 Multiplicité des conventions
 Complexité RH majeure
+4
 « Pour bien comprendre les enjeux, un mot sur mon entreprise d'accueil. Eiffage est un leader européen du BTP et des concessions. 
 Avec plus de 80 000 collaborateurs répartis dans de multiples branches, l'entreprise fait face à une très forte complexité RH, notamment à cause de la multiplicité des conventions collectives et des spécificités des chantiers. »
 
@@ -62,12 +56,14 @@ Une obligation absolue d'exactitude comptable et de respect des délais légaux.
 •
 L'erreur humaine ou technique a un impact direct et immédiat sur la vie du salarié.
 L'ampleur du défi RH
+5
 « À cette échelle, la gestion de la paie est un défi colossal. 
 Nous parlons de millions de données traitées chaque mois : pointages, primes, absences. 
 L'exactitude comptable doit être absolue, car la moindre erreur technique ou humaine a un impact financier direct sur la vie du salarié et sur la conformité légale de l'entreprise. »
 
 
 Eiffage Global Services (EGS)
+6
 « Au sein d'Eiffage, j'évolue dans la branche EGS (Eiffage Global Services), qui mutualise les fonctions support comme l'informatique et la paie. 
 Plus précisément, je fais partie du service "RUN". 
 Notre mission est de garantir le Maintien en Condition Opérationnelle des applications. 
@@ -82,6 +78,7 @@ Fiabilisation : Extractions SQL, vérification de données et simulations.
 •
 Assistance : Orientation procédurale via le système de ticketing.
 Mon Rôle : A-MOA
+7
 « Mon rôle est celui d'Assistance à Maîtrise d'Ouvrage (A-MOA). 
 J'agis comme un pont entre le monde de l'IT et les gestionnaires RH.
  Mes missions s'articulent autour de 3 piliers : 
@@ -90,17 +87,9 @@ la fiabilisation des données via des requêtes SQL, et
 l'assistance utilisateur au quotidien via notre outil de ticketing. »
 
 
-Le cycle de paie classique
-Traiter une paie ne s'improvise pas. 
-C'est un cycle mensuel strict en 4 étapes : 
-d'abord la Collecte des variables du mois,
- puis le Calcul du Brut vers le Net par le moteur de paie, 
-suivi du Contrôle de cohérence comptable,
- et enfin la Clôture avec les virements et l'envoi légal de la DSN. 
-Un bon SIRH doit maîtriser parfaitement ce flux. »
-
 Un SIRH Fragmenté
 Navigation laborieuse
+8
 « Le problème actuel chez Eiffage, c'est que ce flux repose sur un système fragmenté.
  le moteur propriétaire ADP GXP,
  l'outil décisionnel BusinessObjects pour les requêtes, et
@@ -109,23 +98,33 @@ Cette multiplication d'outils impose une navigation laborieuse pour les gestionn
 
 
 
-Les limites opérationnelles
-« Cette fragmentation a des conséquences directes : 
-elle crée des ruptures de chaîne de données compensées par des fichiers Excel manuels, ce qui favorise les erreurs.
-De plus, ces systèmes propriétaires sont très rigides et chers à faire évoluer. 
-Enfin, il manque un véritable portail unifié où le collaborateur pourrait être autonome. »
+Le cycle de paie classique
+9
+Pour mieux visualiser cette difficulte on peut le voir a travers
+le cycle mensuel strict en 4 étapes : 
+d'abord la Collecte des variables du mois,
+ puis le Calcul du Brut vers le Net par le moteur de paie, 
+suivi du Contrôle de cohérence comptable,
+ et enfin la Clôture avec les virements et l'envoi légal de la DSN. 
+Un bon SIRH doit maîtriser parfaitement ce flux. »
 
 Le projet E-BSI
 Le déclencheur du besoin
 Bilan Social digitalisé
 Extractions laborieuses
 Nécessité absolue d'unifier
-Le déclic pour mon projet GFPS est venu d'une mission qui m'a été confiée : le projet E-BSI, 
+10
+Le projet concret qui m’a permit de valider cette problematique est celui de E-BSI, 
 visant à digitaliser le Bilan Social Individuel des salariés via un outil SaaS externe appelé WINCHApps. 
 Il fallait pour cela extraire toutes nos données de paie pour les envoyer à cet éditeur. 
 
 Mon intervention sur E-BSI
-Rôle central E-BSI : Deux axes principaux : actions techniques et interaction lors de la phase finale de recette.
+11
+C'est la version dématérialisée du Bilan Social Individuel.
+
+Il s'agit d'un récapitulatif digital remis à chaque salarié par son entreprise, détaillant sa rémunération globale (salaire fixe, variable, intéressement, mutuelle, prévoyance, avantages en nature, formations suivies, cotisations patronales).
+
+La version en ligne (e-BSI) prend la forme d'un portail RH interactif sécurisé où le collaborateur visualise la valeur totale de son package.Rôle central E-BSI : Deux axes principaux : actions techniques et interaction lors de la phase finale de recette.
 
 Phase 1 : Actions Techniques & Guidage (Entrées)
 S’appuie sur les Spécifications WINCHApps.
@@ -149,30 +148,43 @@ Vigilance requise sur les points d'attention :
 Limites & Fragmentations : Identifier les discontinuités de flux (ex : GXP -> BO).
 Erreur de Paramétrage : Risque identifié pour la fiabilité du système.
 
-Mes observations après E-BSI
-Slide 1 : Notre Fondation Solide (Zone Verte)
-Capitalisation documentaire et maîtrise du Cycle de vie SIRH.
-Expertise paie approfondie : du bilan comptable à la structure microscopique du bulletin. -> C'est notre légitimité.
-Slide 2 : Le Point de Rupture (Zone Orange)
-Constat de Danger et fragilité opérationnelle.
-Flux de données fragmenté en boucle (BO/GXP/WINCHApps).
-Subi : Complexité, Scripts manuels, Imports lourds, Intégration difficile. -> Le système actuel est à bout.
-Slide 3 : La Vision GFPS (Zone Bleue)
-
-
+Les limites opérationnelles
+12
+« Cette fragmentation a des conséquences directes : 
+elle crée des ruptures de chaîne de données compensées par des fichiers Excel manuels, ce qui favorise les erreurs.
+De plus, ces systèmes propriétaires sont très rigides et chers à faire évoluer. 
+Enfin, il manque un véritable portail unifié où le collaborateur pourrait être autonome. »
 
 Le Projet GFPS
 Génération de Fiches de Paie Simplifiées
 Un Proof of Concept (PoC) unifié regroupant l'administration, le calcul et un portail collaborateur au sein d'une seule architecture web.
+13
  C'est ainsi qu'est né le projet GFPS : Génération de Fiches de Paie Simplifiées. 
 J'ai décidé de créer un Proof of Concept d'une solution unifiée qui regrouperait l'administration RH, le calcul pur de la paie, et un portail collaborateur, tout cela dans une seule application web.
 
+Méthodologie de projet : Kanban
+14
+Travaillant seul sur ce projet tout en étant en alternance, j'avais besoin de flexibilité. 
+j'ai choisi d'adopter une démarche Agile  Au lieu de figer toutes les spécifications fonctionnelles (workflows, critères d'acceptation) dans un cahier des charges initial puis de le respecter dans une longue durée, je préfère les définir  et les modifier tout le long du projet
+Pour mon oraganistation j'ai donc choisi la méthodologie Kanban. 
+Grâce à GitHub Projects, j'ai géré mon backlog et limité mon "Work in Progress" (WIP) pour m'assurer de terminer et tester une fonctionnalité avant d'en commencer une autre.
+
+Planning GANTT
+15
+Le diagramme de Gantt offre une vision à long terme pour s'assurer que le projet global respecte les délais impartis.
+Il permet d'anticiper les coupures liées au rythme de l'alternance 
+Il identifie clairement les dépendances entre les tâches majeures afin de structurer l'ordre logique des développements.
+Il matérialise les jalons clés du projet (démonstrations, livrables) de manière parfaitement complémentaire au pilotage quotidien du Kanban.
+
+
 3 Objectifs Majeurs
+16
 « L'application repose sur une séparation stricte des rôles. 
 D'un côté, l'Admin RH a tous les droits pour onboarder des salariés, saisir les primes, déclencher les calculs et paramétrer les taux. 
 De l'autre, l'Employé accède à un espace "Self-Service" en lecture seule pour suivre ses compteurs de congés et télécharger ses fiches de paie. »
 
 Les différentes contraintes
+17
 FP1 : Permettre à l'Administrateur RH de gérer les employés et de générer leurs fiches de paie.
 
 FC1 : S'adapter aux besoins d'ergonomie et de rapidité de l'Administrateur RH.
@@ -185,10 +197,45 @@ FC4 : Être compatible et responsive via un navigateur web moderne.
 
 FC5 : Garantir le stockage sécurisé, intègre et fiable des données.
 
+Looping
+Modélisation Merise.
+UML & Wireframes.
+VS Code / IDE
+Développement Full-Stack.
+Git & GitHub
+Versionnage & Kanban.
+IA Gemini
+Pair-programming.
+L'environnement de travail technique
+18
+Mon environnement de travail était complet :
+ Looping pour la modélisation Merise, Draw.io pour l'UML, VS Code comme IDE principal, Git et GitHub pour le versionnage, et
+enfin l'IA Gemini que j'ai utilisée comme assistant de pair-programming pour m'aider à optimiser certains algorithmes complexes. 
+
 Périmètre fonctionnel (Séparation des rôles)
+19
 « L'application repose sur une séparation stricte des rôles.
 D'un côté, l'Admin RH a tous les droits pour onboarder des salariés, saisir les primes, déclencher les calculs et paramétrer les taux. 
 De l'autre, l'Employé accède à un espace "Self-Service" en lecture seule pour suivre ses compteurs de congés et télécharger ses fiches de paie. »
+
+Arborescence & Navigation (Sitemap)
+20
+L'architecture de navigation est simple et sécurisée.
+ L'application possède un point d'entrée unique : la page de connexion. 
+Ensuite, un aiguillage intelligent basé sur le token de l'utilisateur le redirige automatiquement vers les espaces RH ou Employé auxquels il a droit.
+
+1. Zoning
+Structure & Navigation
+2. Wireframes
+Détail des composants
+3. Maquettes
+Application de la charte
+Cycle de conception visuelle
+21
+Le design a suivi un cycle itératif classique : j'ai commencé par des zonings pour définir la structure, 
+puis j'ai détaillé les composants avec des wireframes, 
+avant d'appliquer la charte graphique complète sur des maquettes haute fidélité, prêtes à être intégrées. »
+
 
 Conception Ergonomique (UI/UX)
 Couleur
@@ -208,56 +255,13 @@ Functional Red (#EF4444)
 Rouge utilisé pour les actions destructrices (ex: icône de suppression).
 Functional Orange (#F59E0B)
 Orange utilisé ponctuellement pour les avertissements ou statuts en attente.
+22
 L'enjeu ergonomique principal était de réduire la fatigue visuelle, car un RH traite énormément de données. 
 J'ai opté pour un style "Glass Morphisme" aéré et transparent. 
 J'ai également mis en place un code couleur sémantique strict : le bleu pour la confiance, le vert pour les validations, et le rouge pour les alertes.
 Réduction de la fatigue visuelle : Lignes épurées et aérées pour faciliter le traitement des données.
 Style Glass Morphisme : Interface moderne, légère et transparente.
 Code couleur : Des teintes définies pour chaque usage (Primary, Secondary, Functional Green/Red/Orange).
-
-Looping
-Modélisation Merise.
-UML & Wireframes.
-VS Code / IDE
-Développement Full-Stack.
-Git & GitHub
-Versionnage & Kanban.
-IA Gemini
-Pair-programming.
-L'environnement de travail technique
-Mon environnement de travail était complet :
- Looping pour la modélisation Merise, Draw.io pour l'UML, VS Code comme IDE principal, Git et GitHub pour le versionnage, et
-enfin l'IA Gemini que j'ai utilisée comme assistant de pair-programming pour m'aider à optimiser certains algorithmes complexes. 
-
-Méthodologie de projet : Kanban
-Travaillant seul sur ce projet tout en étant en alternance, j'avais besoin de flexibilité. 
-j'ai choisi d'adopter une démarche Agile  Au lieu de figer toutes les spécifications fonctionnelles (workflows, critères d'acceptation) dans un cahier des charges initial puis de le respecter dans une longue durée, je préfère les définir  et les modifier tout le long du projet
-Pour mon oraganistation j'ai donc choisi la méthodologie Kanban. 
-Grâce à GitHub Projects, j'ai géré mon backlog et limité mon "Work in Progress" (WIP) pour m'assurer de terminer et tester une fonctionnalité avant d'en commencer une autre.
-
-Planning GANTT
-Le diagramme de Gantt offre une vision à long terme pour s'assurer que le projet global respecte les délais impartis.
-Il permet d'anticiper les coupures liées au rythme de l'alternance 
-Il identifie clairement les dépendances entre les tâches majeures afin de structurer l'ordre logique des développements.
-Il matérialise les jalons clés du projet (démonstrations, livrables) de manière parfaitement complémentaire au pilotage quotidien du Kanban.
-
-
-1. Zoning
-Structure & Navigation
-2. Wireframes
-Détail des composants
-3. Maquettes
-Application de la charte
-Cycle de conception visuelle
-Le design a suivi un cycle itératif classique : j'ai commencé par des zonings pour définir la structure, 
-puis j'ai détaillé les composants avec des wireframes, 
-avant d'appliquer la charte graphique complète sur des maquettes haute fidélité, prêtes à être intégrées. »
-
-
-Arborescence & Navigation (Sitemap)
-L'architecture de navigation est simple et sécurisée.
- L'application possède un point d'entrée unique : la page de connexion. 
-Ensuite, un aiguillage intelligent basé sur le token de l'utilisateur le redirige automatiquement vers les espaces RH ou Employé auxquels il a droit.
 
 Connexion
 Authentification JWT.
@@ -266,6 +270,7 @@ Gestion et Onboarding.
 Espace Salarié
 Compteurs & PDF.
 Aperçu des écrans de l'application
+23
 Voici concrètement les écrans clés : un formulaire de connexion épuré, 
 un Dashboard Administrateur permettant de gérer les employés sous forme de listes interactives
 , et l'espace Salarié focalisé sur la consultation des compteurs et l'export PDF.
@@ -280,11 +285,13 @@ Espace personnel restreint aux seules opérations de lecture et au téléchargem
 •
 Admin RH : 
 Privilèges totaux d'écriture 
+24
 D'un point de vue modélisation UML, le diagramme de cas d'utilisation définit les frontières. 
 L'authentification est un prérequis obligatoire pour tous.
  L'employé est limité à la lecture, tandis que l'Admin RH détient les privilèges d'exécution des calculs et de modification des règles de gestion. »
 
 Modélisation Conceptuelle (MCD)
+25
 Pour modéliser l'architecture de notre application GFPS, nous avons commencé par élaborer un Modèle Conceptuel de Données. 
 L'objectif était de traduire fidèlement les règles de gestion des ressources humaines et de la paie.
 La pierre angulaire de notre modèle est l'entité Utilisateur (qui représente nos employés et nos administrateurs), rattachée à une entité Établissement.
@@ -297,6 +304,7 @@ Pour assurer une grande flexibilité en cas de changement de la législation (co
 Cela nous permet d'avoir un système de calcul des salaires très dynamique."
 
 Modélisation Logique (MLD)
+26
 "Une fois ces règles métier établies, nous les avons traduites informatiquement via le Modèle Logique de Données, pour structurer notre base de données relationnelle.
 
 Les associations de notre MCD se sont transformées en un système de clés primaires et de clés étrangères. 
@@ -311,7 +319,37 @@ Ensuite, elle utilise la clé étrangère de l'utilisateur pour récupérer ses 
 Enfin, la table PAYSLIP_LINE vient se greffer à la fiche de paie via une clé étrangère payslip_id. 
 C'est cette structure relationnelle forte qui garantit que nos calculs de brut et de net sont toujours associés aux bonnes informations contractuelles au moment T."
 
+Justification de la Stack Technique
+Java 21 & Spring Boot : 
+robustesse et la sécurité pour les calculs de paie. 
+Gérer facilement l'authentification avec Spring Security 
+Manipuler les données proprement grâce à JPA.
+JavaScript natif /HTML/ CSS:
+offre une application ultra-légère et rapide, 
+maîtrise des fondamentaux sans dépendre de frameworks lourds. 
+fiches de paie en PDF fait directement dans le navigateur soulage le serveur.
+MySQL : 
+Base de données relationnelle pour structurer les données RH. 
+Garantir les liens critiques entre un employé, son contrat et ses fiches de paie .
+27
+J’ai choisi de le développer avec Java et le framework Spring Boot.
+Étant donné que notre application manipule des données sensibles comme des salaires et des fiches de paie, 
+il nous fallait une technologie réputée pour sa robustesse et très utilisée dans le monde de l'entreprise.
+ Ce choix nous a offert deux grands avantages : d'une part, l'intégration de Spring Security qui nous garantit un système d'authentification fiable et sécurisé. 
+D'autre part, l'utilisation de Spring Data JPA, qui nous permet de manipuler nos données sous forme d'objets Java, rendant notre code beaucoup plus propre et facile à maintenir.
+
+J’ai pris le parti de tout coder en JavaScript natif (Vanilla JS), HTML5 et CSS pour faire l’interface. Ce choix assumé prouve notre maîtrise des fondamentaux du web et nous permet d'offrir une interface ultra-légère, rapide et au design sur-mesure. 
+J'ajouterai un dernier point sur l'optimisation : pour générer les PDF des fiches de paie, nous utilisons la librairie jsPDF. 
+Ainsi, c'est le navigateur de l'utilisateur qui dessine le PDF, et non notre serveur. 
+Cela allège considérablement la charge de notre back-end et garantit une application très réactive.
+
+concernant le stockage de ces données, notre choix s'est porté sur MySQL. 
+C'est un choix purement stratégique lié à la nature de notre projet. Les données des ressources humaines sont extrêmement structurées : un employé est lié à un contrat, ce contrat est lié à un poste, et c'est ce contrat qui permet de générer une fiche de paie. 
+Une base de données relationnelle comme MySQL nous garantit que ces liens ne seront jamais cassés. 
+Elle assure l'intégrité absolue de nos données, ce qui est une obligation légale et technique absolue quand on touche à la finance et à la paie.
+
 Architecture 3-Tiers
+28
 Sur cette diapositive, je vous présente l'architecture applicative de notre projet. 
 Pour garantir un code maintenable et évolutif, nous avons opté pour une architecture classique en 3 tiers, séparant clairement l'affichage, la logique métier et le stockage.
 Le premier tiers est le Client, c'est-à-dire le navigateur web de l'utilisateur. 
@@ -329,150 +367,274 @@ C'est la seule couche autorisée à dialoguer avec la base de données, en utili
 En conclusion, ce flux de données (du navigateur jusqu'à la base MySQL) nous assure une très grande sécurité et une forte modularité : si demain nous voulons créer une application mobile, notre serveur Spring Boot et notre base de données n'auront pas besoin d'être modifiés, car l'API REST est déjà prête."
 
 
-Justification de la Stack Technique
-Java 21 & Spring Boot : 
-robustesse et la sécurité pour les calculs de paie. 
-Gérer facilement l'authentification avec Spring Security 
-Manipuler les données proprement grâce à JPA.
-JavaScript natif /HTML/ CSS:
-offre une application ultra-légère et rapide, 
-maîtrise des fondamentaux sans dépendre de frameworks lourds. 
-fiches de paie en PDF fait directement dans le navigateur soulage le serveur.
-MySQL : 
-Base de données relationnelle pour structurer les données RH. 
-Garantir les liens critiques entre un employé, son contrat et ses fiches de paie .
-Pour le serveur. J’ai choisi de le développer avec Java et le framework Spring Boot.
-Étant donné que notre application manipule des données sensibles comme des salaires et des fiches de paie, 
-il nous fallait une technologie réputée pour sa robustesse et très utilisée dans le monde de l'entreprise.
- Ce choix nous a offert deux grands avantages : d'une part, l'intégration de Spring Security qui nous garantit un système d'authentification fiable et sécurisé. 
-D'autre part, l'utilisation de Spring Data JPA, qui nous permet de manipuler nos données sous forme d'objets Java, rendant notre code beaucoup plus propre et facile à maintenir.
+CI/CD, versionning deploiment
+29
+"Pour aborder l'aspect opérationnel de GFPS, je vous présente sur cette diapositive notre architecture de déploiement. 
+Ce diagramme illustre le cheminement de notre code, de sa conception jusqu'à sa mise en production.
+1. L'environnement de développement et CI/CD : Tout part de notre environnement de développement local. 
+À chaque fois qu'une nouvelle fonctionnalité est terminée, le code est poussé (Push) sur un dépôt centralisé GitHub. 
+C'est ici qu'intervient notre chaîne d'Intégration Continue (CI/CD). Avant tout déploiement, nos tests automatisés (les tests unitaires JUnit et d'intégration) s'exécutent. 
+Si un seul test échoue, le déploiement est bloqué. Cela garantit que la qualité du code reste irréprochable.
+2. Le Serveur d'Application (Hébergement) : Une fois le code validé, notre application Spring Boot est compilée, par exemple via Maven, pour générer une archive exécutable.
+Elle est ensuite déployée sur notre serveur d'application (qui intègre nativement un serveur Tomcat). 
+C'est ce serveur distant qui va exécuter la logique métier et écouter les requêtes entrantes sur le port 8080.
+3. Le Serveur de Base de Données : En parallèle, nous avons notre serveur de base de données MySQL. 
+Pour des raisons de sécurité évidentes, la base de données n'est pas exposée directement sur Internet.
+ Elle se trouve dans une zone protégée, et seul notre serveur d'application Spring Boot a l'autorisation de communiquer avec elle via des requêtes JDBC sécurisées.
+4. L'accès Client : Enfin, lorsqu'un gestionnaire RH ou un employé souhaite accéder à GFPS, son navigateur web va envoyer une requête HTTPS
+. Le navigateur télécharge les ressources statiques (notre interface en HTML/JS/CSS) et l'API prend ensuite le relais de manière fluide.
+En résumé : Cette architecture physique sépare parfaitement les responsabilités, protège la base de données derrière le serveur applicatif, et automatise les contrôles de qualité pour sécuriser chaque mise à jour."
 
-J’ai pris le parti de tout coder en JavaScript natif (Vanilla JS), HTML5 et CSS pour faire l’interface. Ce choix assumé prouve notre maîtrise des fondamentaux du web et nous permet d'offrir une interface ultra-légère, rapide et au design sur-mesure. 
-J'ajouterai un dernier point sur l'optimisation : pour générer les PDF des fiches de paie, nous utilisons la librairie jsPDF. 
-Ainsi, c'est le navigateur de l'utilisateur qui dessine le PDF, et non notre serveur. 
-Cela allège considérablement la charge de notre back-end et garantit une application très réactive.
 
-concernant le stockage de ces données, notre choix s'est porté sur MySQL. 
-C'est un choix purement stratégique lié à la nature de notre projet. Les données des ressources humaines sont extrêmement structurées : un employé est lié à un contrat, ce contrat est lié à un poste, et c'est ce contrat qui permet de générer une fiche de paie. 
-Une base de données relationnelle comme MySQL nous garantit que ces liens ne seront jamais cassés. 
-Elle assure l'intégrité absolue de nos données, ce qui est une obligation légale et technique absolue quand on touche à la finance et à la paie.
-
-1. L'Endpoint
-Annotation @RestController. Définition claire des routes HTTP (GET, POST, PUT, DELETE).
-2. L'Injection (IoC)
-Utilisation de l'Inversion de Contrôle via @Autowired pour instancier les Services Métiers.
-3. La Réponse
-Encapsulation stricte des données renvoyées dans des ResponseEntity pour assurer les statuts HTTP.
-Architecture d'un Contrôleur Spring Boot
-
-Architecture asynchrone non-bloquante :
-•
-Utilisation de l'API native Fetch de JavaScript côté client.
-•
-Requêtes gérées via des Promesses, garantissant que l'interface (UI) ne se fige jamais pendant les calculs serveurs.
-•
-Format d'échange léger et standardisé : le JSON, facilement désérialisé par Spring Boot.
-Communication Client - Serveur (API)
-
-Mapping Objet-Relationnel (ORM)
-Les tables MySQL sont mappées directement et de manière transparente via les annotations Java @Entity, @Table, et @ManyToOne.
-Le pattern Repository masque la complexité du SQL pur et automatise la génération des requêtes CRUD.
-Sécurisation par DTO
-Utilisation intensive des Data Transfer Objects (DTO).
-Cette approche isole le modèle : les entités sensibles contenant des informations privées ne sont jamais exposées directement à l'interface client réseau.
-Focus Backend : Spring Data JPA
-
-Authentification JWT
-Approche 100% Stateless
-Vérification hash BCrypt
-Génération de jeton signé
-Header Authorization: Bearer
-
-1. Génération
-Signature numérique avec rôles encodés après validation.
-2. Stockage
-Enregistrement dans le sessionStorage du client.
-3. Interception
-Le Filtre Spring vérifie la signature à chaque appel API.
-4. Expiration
-Péremption automatique (TTL) pour prévenir le vol de session.
-Sécurisation : Cycle de vie du Token JWT
-
-Moteur de calcul
-Cœur algorithmique exact
-Conversion Brut vers Net
-Prélèvement à la Source
-Taux 100% paramétrables
-
-Le flux d'exécution backend pour valider un mois de paie :
-1.
-L'Admin déclenche le calcul via l'API sécurisée.
-2.
-Le PayrollService orchestre toutes les opérations : formules, cotisations, PAS.
-3.
-Persistance des données inaltérables via le Repository.
-4.
-Création de la restitution PDF client-side.
-Le Processus de Génération du Bulletin
-
-Utilisation de jsPDF
-La génération du document PDF officiel ne s'effectue pas sur le serveur Java (ce qui serait très lourd), mais directement dans le navigateur final.
-L'interface récupère les données calculées (JSON) et utilise le moteur de rendu du client pour "dessiner" le document.
-Avantages Client-Side
-•
-Soulagement des serveurs : Pas de consommation CPU ou mémoire côté backend pour traiter des fichiers binaires.
-•
-Gain de performance réseau : Aucun transfert lourd, réduisant drastiquement les temps d'attente pour le salarié.
-Optimisation : Génération PDF Décentralisée
-
-La criticité financière des données impose une validation applicative sans faille.
-Tests Unitaires (JUnit 5) : Chaque méthode mathématique du moteur de paie est testée pour certifier l'exactitude des calculs et des arrondis au centime.
-Mocking (Mockito) : Utilisation de simulations pour tester les Services métiers sans jamais altérer la base de données réelle.
-Tests d'Intégration (MockMvc) : Validation de bout-en-bout, de la requête HTTP entrante jusqu'à la persistance en base.
-Assurance Qualité et Stratégie de Tests
-
-Déploiement & CI/CD
-Versionnage Git / GitHub
-Branches isolées par Feature
-Tests unitaires automatisés
-Déploiement sur serveur
-
-Conformité stricte au RGPD et protection de données hautement sensibles.
-Usurpation d'identité : Le risque d'un accès non autorisé au compte d'un administrateur RH pour falsifier des virements.
-Fuite de données massives : L'extraction illégitime, par faille logicielle, de la base de données MySQL.
-Injections et accès transversaux : La manipulation des URL pour forcer la consultation de la paie d'un collaborateur tiers.
 Cybersécurité : Les Risques Identifiés
+30
+« Sur cette diapositive, nous abordons un volet critique de notre application : la cybersécurité.  
+Manipuler des bulletins de salaire, des numéros de sécurité sociale ou des IBAN nous impose un respect strict du RGPD. 
+Pour structurer notre démarche, nous avons ciblé trois menaces principales :  
 
-Chiffrement
-Hachage robuste par l'algorithme BCrypt avec salage individuel systématique. Aucun mot de passe en clair.
+Premièrement, l'usurpation d'identité RH : si un attaquant prend le contrôle d'un compte administrateur, il peut altérer les règles de calcul, ajouter des primes frauduleuses ou modifier des coordonnées bancaires. 
+
+ Deuxièmement, la fuite de données massives : une attaque réussie sur notre base MySQL compromettrait la confidentialité de l'ensemble des collaborateurs du groupe. 
+
+ Troisièmement, les accès transversaux par manipulation d'URL : c'est le risque qu'un salarié tente d'accéder aux fiches de paie d'un tiers en modifiant simplement l'identifiant dans son navigateur. 
+
+Ces trois risques ont directement guidé la mise en place de nos parades techniques sur la slide suivante. » 
+
+Hachage
+Hachage robuste par l'algorithme BCrypt. 
+Aucun mot de passe en clair.
 Contrôle RBAC
 Contrôle d'accès strict via @PreAuthorize bloquant nativement les requêtes selon le rôle (Admin vs Employé).
 Anti-Injection
 L'ORM Spring Data JPA génère nativement des requêtes préparées (Prepared Statements), bloquant les injections SQL.
 Cybersécurité : Solutions Techniques
+31
+« Pour répondre concrètement à ces trois risques, nous avons déployé trois parades techniques complémentaires :
+Côté mots de passe : nous appliquons l'algorithme BCrypt avec un salage individuel. Aucun mot de passe ne transite ni ne réside en clair dans MySQL.
+Côté accès applicatif : nous appliquons un contrôle RBAC strict. Grâce à l'annotation Spring Security @PreAuthorize, le back-end contrôle le rôle présent dans le token JWT avant chaque exécution. Toute tentative de manipulation d'URL par un rôle non autorisé est immédiatement bloquée avec une erreur 403.
+Côté base de données : notre ORM Spring Data JPA génère nativement des requêtes préparées, ce qui prémunit intégralement l'application contre les injections SQL.
+Ces mécanismes garantissent la sécurité de nos traitements conformément aux standards du RGPD. »
 
-Faisabilité démontrée : Capacité d'internalisation prouvée.
-Processus unifié et fluide : Fin des extractions multi-outils.
-Autonomie Salarié : Self-Service 100% opérationnel.
-Bilan du Projet PoC
 
-Développement Logiciel
-Gestion de Projet & Qualité
-•
-Conception et modélisation de bases de données relationnelles complexes (MCD/MLD/SQL).
-•
-Développement complet d'interfaces utilisateur (Front-end SPA) réactives et asynchrones.
-•
-Création de composants métier (Back-end) et exposition stricte d'API RESTful robustes.
-•
-Autonomie totale assumée sur les phases d'analyse, développement, tests et déploiement.
-•
-Application pratique et suivie des méthodologies agiles (Kanban via GitHub).
-•
-Intégration des enjeux stricts de cybersécurité à chaque couche (Security by Design).
-Bilan Professionnel : Compétences CDA Validées
+Authentification JWT
+Hachage robuste des mots de passe (Algorithme BCrypt)
+Génération d'un jeton JWT signé numériquement
+Stockage sécurisé côté client (SessionStorage)
+32
+- **`U->>F: Saisie Email & Mot de passe`** : L'Utilisateur (U) tape ses identifiants dans le formulaire affiché sur le Navigateur (F).
+- **`F->>C: POST /api/auth/login (Credentials)`** : Le Navigateur (F) envoie une requête HTTP POST contenant les identifiants au Contrôleur d'authentification (C).
+- **`C->>R: findByEmail(email)`** : Le Contrôleur (C) demande au Repository (R) de chercher un compte correspondant à cet email.
+- **`R->>DB: SELECT * FROM user WHERE email = ?`** : Le Repository (R) exécute la requête SQL pour chercher l'utilisateur dans la Base de Données (DB).
+- **`DB-->>R: User Entity (ou null)`** : La Base de Données (DB) renvoie les données de l'utilisateur (ou rien s'il n'existe pas) au Repository (R).
+- **`R-->>C: Retour Utilisateur`** : Le Repository (R) transmet l'objet Utilisateur trouvé au Contrôleur (C).
+- **`C->>C: Vérification mot de passe (BCrypt)`** : Le Contrôleur (C) compare en interne le mot de passe reçu avec celui de la base de données via l'algorithme BCrypt.
+**Scénario 1 : Identifiants invalides (`alt Identifiants invalides`)**
+- **`C-->>F: 401 Unauthorized`** : Le Contrôleur (C) renvoie un code d'erreur HTTP 401 au Navigateur (F).
+- **`F-->>U: Affichage erreur (Toast)`** : Le Navigateur (F) affiche une notification visuelle d'erreur à l'Utilisateur (U).
+**Scénario 2 : Identifiants valides (`else Identifiants valides`)**- 
+**`C->>C: Génération du Token JWT`** : Le Contrôleur (C) génère en interne un jeton de sécurité JWT signé.
+- **`C-->>F: 200 OK (Token JWT + Infos Utilisateur)`** : Le Contrôleur (C) renvoie un succès (200 OK) avec le Token et les infos de l'utilisateur au Navigateur (F).
+- **`F->>F: Stockage dans le LocalStorage`** : Le Navigateur (F) sauvegarde le Token JWT dans sa mémoire locale (LocalStorage) pour les prochaines requêtes.
+
+**Sous-scénario de Routage :**- 
+**`F-->>U: Redirection vers /dashboard RH`** : Si le rôle est ADMIN, le Navigateur (F) redirige l'Utilisateur (U) vers l'espace RH.
+- **`F-->>U: Redirection vers /dashboard Personnel`** : Si le rôle est EMPLOYÉ, le Navigateur (F) redirige l'Utilisateur (U) vers son espace personnel.
+
+- **`F-->>U: Redirection vers /dashboard RH`** : Si le rôle est ADMIN, le Navigateur (F) redirige l'Utilisateur (U) vers l'espace RH.
+- **`F-->>U: Redirection vers /dashboard Personnel`** : Si le rôle est EMPLOYÉ, le Navigateur (F) redirige l'Utilisateur (U) vers son espace personnel.
+
+
+- **`C->>C: Génération du Token JWT`** : Le Contrôleur (C) génère en interne un jeton de sécurité JWT signé.
+- **`C-->>F: 200 OK (Token JWT + Infos Utilisateur)`** : Le Contrôleur (C) renvoie un succès (200 OK) avec le Token et les infos de l'utilisateur au Navigateur (F).
+- **`F->>F: Stockage dans le LocalStorage`** : Le Navigateur (F) sauvegarde le Token JWT dans sa mémoire locale (LocalStorage) pour les prochaines requêtes.
+
+**Sous-scénario de Routage :**
+
+- **`F-->>U: Redirection vers /dashboard RH`** : Si le rôle est ADMIN, le Navigateur (F) redirige l'Utilisateur (U) vers l'espace RH.
+- **`F-->>U: Redirection vers /dashboard Personnel`** : Si le rôle est EMPLOYÉ, le Navigateur (F) redirige l'Utilisateur (U) vers son espace personnel.
+
+"Dès la réception de cette réponse, le front-end stocke ce Token JWT dans le LocalStorage du navigateur. C'est ce jeton qui servira de « laissez-passer » pour toutes les futures requêtes.
+Enfin, pour terminer l'expérience utilisateur, nous avons un routage dynamique basé sur le rôle de la personne connectée :
+Si son rôle est ADMIN, il est redirigé vers le Dashboard RH.
+Si son rôle est EMPLOYÉ, il est dirigé vers son Dashboard Personnel."
+
+
+Consultation des Fiches de Paie (Côté Employé)
+33
+Extraction ciblée et sécurisée des données (Requête SQL optimisée)
+
+Allègement du transfert réseau (Conversion en objets DTO)
+
+Génération instantanée du PDF côté client (Librairie jsPDF)
+**Phase 1 : Consultation de l'historique**
+
+- **`E->>F: Navigation vers 'Mes fiches de paie'`** : L'Employé (E) clique sur l'onglet de navigation pour consulter son historique sur le Front-end (F).
+- **`F->>C: GET /api/payslips?employeeId={id}`** : Le Front-end (F) envoie une requête HTTP GET au Contrôleur (C) pour récupérer les fiches de l'employé spécifique.
+- **`C->>R: findByUserId(id)`** : Le Contrôleur (C) fait appel au Repository (R) pour récupérer uniquement les fiches de cet employé.
+- **`R->>DB: SELECT * FROM payslip WHERE user_id = ?`** : Le Repository (R) exécute la requête SQL filtrée directement dans la Base de Données (DB).
+- **`DB-->>R: List<Payslip> (Filtrée)`** : La Base de Données (DB) renvoie la liste déjà filtrée au Repository (R).
+- **`R-->>C: Historique des fiches`** : Le Repository (R) transmet ces données pertinentes au Contrôleur (C).
+- **`C->>C: Conversion en List<PayslipDto>`** : Le Contrôleur (C) convertit les entités de base de données en objets DTO (Data Transfer Object) pour un envoi optimisé.
+- **`C-->>F: 200 OK (List JSON)`** : Le Contrôleur (C) renvoie la liste finale au format texte JSON avec un statut de succès (200 OK) au Front-end (F).
+- **`F-->>E: Affichage du tableau filtré`** : Le Front-end (F) génère le tableau visuel et l'affiche à l'Employé (E).
+
+**Phase 2 : Génération et téléchargement du PDF**
+
+- **`E->>F: Clic sur icône Téléchargement d'une fiche`** : L'Employé (E) clique sur le bouton pour télécharger une fiche spécifique sur le Front-end (F).
+- **`F->>F: Formatage local des données JSON`** : Le Front-end (F) structure les données JSON qu'il possède déjà en mémoire.
+- **`F->>F: Génération instantanée PDF (jsPDF)`** : Le Front-end (F) dessine le document PDF entièrement côté client grâce à la librairie jsPDF, sans avoir besoin de redemander quoi que ce soit au serveur.
+- **`F-->>E: Fichier .pdf sauvegardé sur l'appareil`** : Le navigateur sauvegarde physiquement le fichier PDF sur l'ordinateur de l'Employé (E).
+
+Focus Backend : Spring Data JPA
+@Entity
+@Table(name = "payslip")
+public class Payslip {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "contract_id")
+
+
+    
+
+ 
+
+    private Contract contract;
+
+    private String periodMonthYear;
+    private BigDecimal baseSalary;
+    private BigDecimal totalGross;
+    private BigDecimal totalNet;
+    private String status = "DRAFT";
+    private LocalDateTime generationDate;
+
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    
+
+ 
+34
+"Concernant la manipulation des données, nous avons utilisé l'ORM Hibernate via Spring Data JPA. 
+Comme vous pouvez le voir sur ces extraits de code, cela nous permet de mapper nos tables MySQL directement en objets Java. 
+par mesure de sécurité, nous n'envoyons jamais ces entités brutes au client web, car elles contiennent des données sensibles. 
+Nous utilisons systématiquement le pattern DTO (Data Transfer Object). 
+C'est un objet intermédiaire qui filtre la donnée pour n'exposer sur le réseau que ce qui est strictement nécessaire à l'affichage."
+
+"Pour illustrer concrètement notre utilisation de l'ORM (Object-Relational Mapping), voici un extrait de la classe Payslip.java, qui représente une fiche de paie dans notre application.
+
+[Ligne 13-14] Tout d'abord, on remarque les annotations @Entity et @Table(name = "payslip"). C'est ce qui indique à Spring Data JPA que cette simple classe Java correspond physiquement à une table nommée "payslip" dans notre base de données MySQL.
+
+[Ligne 17-19] Ensuite, nous avons l'annotation @Id couplée à @GeneratedValue. Cela permet au framework de gérer automatiquement l'identifiant unique de chaque fiche de paie de façon auto-incrémentée (Auto-increment) à chaque création, sans que nous ayons à l'écrire à la main.
+
+[Ligne 21-27] C'est ici que réside la véritable puissance du relationnel. Vous pouvez voir l'annotation @ManyToOne au-dessus de l'Utilisateur (User) et du Contrat (Contract). Cela signifie que "Plusieurs fiches de paies peuvent appartenir à un seul Utilisateur et à un seul Contrat". L'annotation @JoinColumn indique expressément le nom de la clé étrangère (Foreign Key) qui sera créée dans la table MySQL, par exemple user_id.
+
+[Ligne 29-35] Enfin, on retrouve les propriétés classiques encapsulées (le mois de la période, le brut, le net, et un statut par défaut à 'DRAFT' ou Brouillon). Pour des raisons de précision financière, tous les salaires utilisent le type BigDecimal, ce qui évite les célèbres bugs d'arrondis mathématiques liés aux nombres décimaux classiques en informatique.
+
+Grâce à ce petit bout de code extrêmement lisible, Spring génère et sécurise pour nous toute l'infrastructure de la base de données !"
+
+Focus Backend : Spring Data JPA
+
+
+    
+
+ 
+@RestController
+@RequestMapping("/api/auth")
+public class AuthController {
+
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+
+    public AuthController(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
+
+   
+35
+  @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody LoginRequest request) {
+        return userRepository.findByEmail(request.email())
+                .map(user -> {
+                    if (passwordEncoder.matches(request.password(), user.getPassword())) {
+                        LoginResponse resp = new LoginResponse(
+                                user.getId(),
+                                user.getId(),
+                                user.getEmail(),
+                                user.getFirstName(),
+                                user.getLastName(),
+                                user.getRole());
+                        return ResponseEntity.ok(resp);
+                    }
+                    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Incorrect credentials");
+                })
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Incorrect credentials"));
+    }
+    public record LoginRequest(String email, String password) {
+    }
+
+    public record LoginResponse(Integer id, Integer employeeId, String email, String firstName, String lastName,
+            String role) {
+    }
+}
+"Concernant la manipulation des données, nous avons utilisé l'ORM Hibernate via Spring Data JPA. 
+Comme vous pouvez le voir sur ces extraits de code, cela nous permet de mapper nos tables MySQL directement en objets Java. 
+par mesure de sécurité, nous n'envoyons jamais ces entités brutes au client web, car elles contiennent des données sensibles. 
+Nous utilisons systématiquement le pattern DTO (Data Transfer Object). 
+C'est un objet intermédiaire qui filtre la donnée pour n'exposer sur le réseau que ce qui est strictement nécessaire à l'affichage."
+
+"Pour illustrer concrètement notre utilisation de l'ORM (Object-Relational Mapping), voici un extrait de la classe Payslip.java, qui représente une fiche de paie dans notre application.
+
+[Ligne 13-14] Tout d'abord, on remarque les annotations @Entity et @Table(name = "payslip"). C'est ce qui indique à Spring Data JPA que cette simple classe Java correspond physiquement à une table nommée "payslip" dans notre base de données MySQL.
+
+[Ligne 17-19] Ensuite, nous avons l'annotation @Id couplée à @GeneratedValue. Cela permet au framework de gérer automatiquement l'identifiant unique de chaque fiche de paie de façon auto-incrémentée (Auto-increment) à chaque création, sans que nous ayons à l'écrire à la main.
+
+[Ligne 21-27] C'est ici que réside la véritable puissance du relationnel. Vous pouvez voir l'annotation @ManyToOne au-dessus de l'Utilisateur (User) et du Contrat (Contract). Cela signifie que "Plusieurs fiches de paies peuvent appartenir à un seul Utilisateur et à un seul Contrat". L'annotation @JoinColumn indique expressément le nom de la clé étrangère (Foreign Key) qui sera créée dans la table MySQL, par exemple user_id.
+
+[Ligne 29-35] Enfin, on retrouve les propriétés classiques encapsulées (le mois de la période, le brut, le net, et un statut par défaut à 'DRAFT' ou Brouillon). Pour des raisons de précision financière, tous les salaires utilisent le type BigDecimal, ce qui évite les célèbres bugs d'arrondis mathématiques liés aux nombres décimaux classiques en informatique.
+
+Grâce à ce petit bout de code extrêmement lisible, Spring génère et sécurise pour nous toute l'infrastructure de la base de données !"
+
+Demonstration GFPS
+36
+"Concernant la manipulation des données, nous avons utilisé l'ORM Hibernate via Spring Data JPA. 
+Comme vous pouvez le voir sur ces extraits de code, cela nous permet de mapper nos tables MySQL directement en objets Java. 
+par mesure de sécurité, nous n'envoyons jamais ces entités brutes au client web, car elles contiennent des données sensibles. 
+Nous utilisons systématiquement le pattern DTO (Data Transfer Object). 
+C'est un objet intermédiaire qui filtre la donnée pour n'exposer sur le réseau que ce qui est strictement nécessaire à l'affichage."
+
+"Pour illustrer concrètement notre utilisation de l'ORM (Object-Relational Mapping), voici un extrait de la classe Payslip.java, qui représente une fiche de paie dans notre application.
+
+[Ligne 13-14] Tout d'abord, on remarque les annotations @Entity et @Table(name = "payslip"). C'est ce qui indique à Spring Data JPA que cette simple classe Java correspond physiquement à une table nommée "payslip" dans notre base de données MySQL.
+
+[Ligne 17-19] Ensuite, nous avons l'annotation @Id couplée à @GeneratedValue. Cela permet au framework de gérer automatiquement l'identifiant unique de chaque fiche de paie de façon auto-incrémentée (Auto-increment) à chaque création, sans que nous ayons à l'écrire à la main.
+
+[Ligne 21-27] C'est ici que réside la véritable puissance du relationnel. Vous pouvez voir l'annotation @ManyToOne au-dessus de l'Utilisateur (User) et du Contrat (Contract). Cela signifie que "Plusieurs fiches de paies peuvent appartenir à un seul Utilisateur et à un seul Contrat". L'annotation @JoinColumn indique expressément le nom de la clé étrangère (Foreign Key) qui sera créée dans la table MySQL, par exemple user_id.
+
+[Ligne 29-35] Enfin, on retrouve les propriétés classiques encapsulées (le mois de la période, le brut, le net, et un statut par défaut à 'DRAFT' ou Brouillon). Pour des raisons de précision financière, tous les salaires utilisent le type BigDecimal, ce qui évite les célèbres bugs d'arrondis mathématiques liés aux nombres décimaux classiques en informatique.
+
+Grâce à ce petit bout de code extrêmement lisible, Spring génère et sécurise pour nous toute l'infrastructure de la base de données !"
+
+Bilan Professionnel 
+37
+Ce projet m'a permis de comprendre les différentes compétences d’un Concepteur et Développeur d'Application
+ De l'analyse du besoin auprès des utilisateurs A-MOA à la conception de la BDD, jusqu'au développement full-stack et à la sécurisation des composants.
 
 Fin de la présentation
-GFPS reste un prototype prometteur qui ouvre la voie à l'intégration complète des flux légaux d'état (DSN).
-Questions ?
+GFPS reste un prototype prometteur 
 Je vous remercie de votre attention.
+38
+« En conclusion, GFPS démontre la faisabilité d'une solution unifiée et moderne pour la gestion de la paie. »
+Je vous remercie sincèrement pour votre attention et je suis disponible pour répondre à vos questions. »
