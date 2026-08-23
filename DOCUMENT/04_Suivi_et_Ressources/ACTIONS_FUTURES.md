@@ -7,10 +7,10 @@
 - [⚙️ 3. Tests & Déploiement](#-3-tests--déploiement)
 - [🚀 4. Évolutions Futures (Version 2.0)](#-4-évolutions-futures-version-20)
 
-## 📊 État Global (Progression : 25%)
-- ✅ **18** Tâches complétées (Modèles JPA, Base de données, Structure de base)
-- 🔄 **8** Tâches en cours
-- ❌ **47** Tâches à faire
+## 📊 État Global (Progression : ~60% sur les tâches GitHub)
+- ✅ **14** Tâches complétées (Modèles JPA, Base de données, Structure de base, UI)
+- 🔄 **9** Tâches en cours (Principalement les Contrôleurs et Services)
+- ❌ **0** Tâches restantes non listées
 
 **🔴 Blocages Principaux :** 
 1. La **Service Layer** est manquante (bloque tout le métier).
@@ -29,7 +29,7 @@
 - [ ] **Gestion des Salariés (Epic #29)**
   - [ ] **Création d'un salarié (#30) :**
     - [ ] UI : Pop-up suppression établissement et renommer "groupe" en "établissement".
-    - [ ] API : Créer un contrôleur `Establishment` retournant tous les établissements (nom et id caché).
+    - [x] API : Créer un contrôleur `Establishment` retournant tous les établissements (nom et id caché).
     - [ ] DB/Backend : Créer tous les champs manquants pour créer un employé (réf : seed user BOB).
     - [ ] API : Nouveau contrôleur avec méthode POST (ajout employé). Argument : DTO ajout employé. Retour : statut de la requête.
   - [ ] **Affichage de la liste des employés (#31)**
@@ -41,16 +41,16 @@
     - [ ] Contrôleur : Faire la somme des montants.
 
 - [ ] **Feature Bulletin de paie (Epic #25)**
-- [x] Créer une seed : plusieurs bulletins de paie pour l'utilisateur BOB (#26)
+  - [ ] Créer une seed : plusieurs bulletins de paie pour l'utilisateur BOB (#26)
   - [ ] **Affichage bulletin côté employé (#27) :**
-    - [ ] Créer un contrôleur (Argument : utilisateur).
-    - [ ] Retour : Liste d'éléments à définir.
-    - [ ] Comportement : Requête qui va chercher dans la table des fiches de paie via l'ID.
+    - [x] Créer un contrôleur (Argument : utilisateur).
+    - [x] Retour : Liste d'éléments à définir.
+    - [x] Comportement : Requête qui va chercher dans la table des fiches de paie via l'ID.
     - [ ] Sécurité : Seul l'utilisateur peut requêter ses propres bulletins.
   - [ ] **Affichage côté RH (#28) :**
-    - [ ] Contrôleur : Même fichier (ex: `allbulletin`), sans argument.
-    - [ ] Retour : Liste de tous les bulletins.
-    - [ ] Comportement : Recherche de tous les bulletins de paie de tous les employés.
+    - [x] Contrôleur : Même fichier (ex: `allbulletin`), sans argument.
+    - [x] Retour : Liste de tous les bulletins.
+    - [x] Comportement : Recherche de tous les bulletins de paie de tous les employés.
     - [ ] Sécurité : Accès restreint au rôle ADMIN.
 
 - [ ] **Fiabilisation & Compléments REST**
@@ -63,13 +63,13 @@
 ## 🎨 2. Refactoring et Simplification UI (Frontend)
 
 - [x] 🇫🇷 **Général :** Traduire l'ensemble de l'interface en français (terminé).
-- [ ] 🗑️ **Général :** Supprimer le simulateur.
-- [ ] 🧹 **Nettoyage Dashboard Admin :**
-  - [ ] Enlever la case "Heures supplémentaires".
-- [ ] 🧹 **Nettoyage Dashboard Employé & Vues générales :**
-  - [ ] Enlever les cases : "Masse salariale" et "Nombre d'employés".
-  - [ ] Enlever les cases : "Raccourcis", "Note d'information" et "Gérer les employés".
-  - [ ] Enlever les filtres : "Salarié", "Générer" et "Net à payer".
+- [x] 🗑️ **Général :** Supprimer le simulateur.
+- [x] 🧹 **Nettoyage Dashboard Admin :**
+  - [x] Enlever la case "Heures supplémentaires".
+- [x] 🧹 **Nettoyage Dashboard Employé & Vues générales :**
+  - [x] Enlever les cases : "Masse salariale" et "Nombre d'employés".
+  - [x] Enlever les cases : "Raccourcis", "Note d'information" et "Gérer les employés".
+  - [x] Enlever les filtres : "Salarié", "Générer" et "Net à payer".
 - [ ] 🔌 **Intégration API :** Remplacer les fausses données Frontend par de vrais appels API vers le Backend.
 
 ---
@@ -95,6 +95,6 @@
 - [ ] 📊 Module d'analyse avancée et de prévisions.
 
 ---
-*Dernière mise à jour : 2026-07-20*
+*Dernière mise à jour : 2026-08-23*
 
 [⬅️ Retour à l'Index principal](../INDEX.md)

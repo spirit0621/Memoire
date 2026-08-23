@@ -794,7 +794,7 @@ CREATE INDEX idx_leave_balance_user_year ON leave_balance(user_id, year);
 
 ---
 
-*Dernière mise à jour: 2026-07-20*
+*Dernière mise à jour: 2026-08-23*
 *Prochaine révision: Après ajout Service Layer*
 
 [⬅️ Retour à l'Index principal](../INDEX.md)

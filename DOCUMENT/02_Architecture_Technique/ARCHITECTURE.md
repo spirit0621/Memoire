@@ -2,10 +2,10 @@
 
 ## Sommaire
 
-- [1. Vue d'Ensemble Architecturale](#1-vue-densemble-architecturale)
+- [1. Vue d&#39;Ensemble Architecturale](#1-vue-densemble-architecturale)
 - [2. Structure des Composants Backend](#2-structure-des-composants-backend)
 - [3. Structure du Frontend](#3-structure-du-frontend)
-- [4. Flux d'Authentification](#4-flux-dauthentification)
+- [4. Flux d&#39;Authentification](#4-flux-dauthentification)
 - [5. Flux de Création de Bulletin de Paie](#5-flux-de-création-de-bulletin-de-paie)
 - [6. Sécurité et Patterns](#6-sécurité-et-patterns)
 - [7. Base de Données - Relations](#7-base-de-données---relations)
@@ -266,7 +266,7 @@ classDiagram
 
 ### 3.1 Architecture SPA
 
-```
+```Markdown
 index.html (Point d'entrée unique)
     ↓
 app.js (Initialisation)
@@ -327,7 +327,7 @@ css/
 
 ## 4. Flux d'Authentification (JWT)
 
-> 🔗 *Voir le [Diagramme de Séquence détaillé de l'Authentification](../06_Workflow/flux/01_auth_workflow.md)*
+> 🔗 *Voir le [Diagramme de Séquence détaillé de l&#39;Authentification](../06_Workflow/flux/01_auth_workflow.md)*
 
 ```mermaid
 sequenceDiagram
@@ -433,6 +433,6 @@ Absence M---N AbsenceType
 
 ---
 
-*Dernière mise à jour: 2026-07-20*
+*Dernière mise à jour: 2026-08-23*
 
-[⬅️ Retour à l'Index principal](../INDEX.md)
+[⬅️ Retour à l&#39;Index principal](../INDEX.md)

@@ -2,7 +2,7 @@
 
 > **GFPS (Génération de Fiches de Paie Simplifiées)** est un Proof of Concept (PoC) développé dans le cadre d'un mémoire de fin d'études en alternance. Ce projet vise à moderniser et centraliser la gestion des ressources humaines et le calcul de la paie.
 
-L'intégralité de la documentation d'analyse, d'architecture et de suivi de projet est centralisée dans le dossier **[DOCUMENT/INDEX.md](../DOCUMENT/INDEX.md)**.
+L'intégralité de la documentation d'analyse, d'architecture et de suivi de projet est centralisée dans le dossier **[DOCUMENT/INDEX.md](DOCUMENT/INDEX.md)**.
 
 ---
 
@@ -84,9 +84,10 @@ L'application repose sur une **Architecture N-Tiers (Monolithique)** robuste. Le
 
 ### 4.1. Lancer la Base de Données
 
-Un fichier `compose.yml` est inclus pour provisionner rapidement l'environnement MySQL local.
+Un fichier `compose.yml` est inclus dans le dossier `memoire` pour provisionner rapidement l'environnement MySQL local. Placez-vous d'abord dans ce dossier :
 
 ```bash
+cd memoire
 docker-compose up -d
 ```
 

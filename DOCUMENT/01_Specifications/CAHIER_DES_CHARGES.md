@@ -303,6 +303,6 @@ Afin de répondre aux exigences fonctionnelles, l'application est structurée au
 
 ---
 
-*Dernière mise à jour: 2026-07-20*
+*Dernière mise à jour: 2026-08-23*
 
 [⬅️ Retour à l'Index principal](../INDEX.md)

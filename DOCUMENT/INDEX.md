@@ -54,6 +54,16 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 * **[02_code_validation_process.md](06_Workflow/processus/02_code_validation_process.md)** : Processus de validation de code (Pull Request & CI).
 * **[03_versioning_process.md](06_Workflow/processus/03_versioning_process.md)** : Processus de versioning et mise en production.
 
+### 📁 08_Oral
+* **[discours_soutenance.md](08_Oral/discours_soutenance.md)** : Discours pour la soutenance orale.
+* **[plan_soutenance.md](08_Oral/plan_soutenance.md)** : Plan de la présentation pour la soutenance.
+
+### 📁 Documents Principaux (Racine)
+* **[Memoire Ecrit.md](Memoire%20Ecrit.md)** : Version Markdown du document de mémoire.
+* **[Memoire Ecrit.docx](Memoire%20Ecrit.docx)** : Version Word du document de mémoire.
+* **[GFPS - Soutenance CDA (Images Intégrées).txt](GFPS%20-%20Soutenance%20CDA%20(Images%20Int%C3%A9gr%C3%A9es).txt)** : Script / notes de la soutenance avec intégration des images.
+
+
 ---
 
 ## 🚀 Par où commencer ?
@@ -68,4 +78,4 @@ Ce dossier contient tous les documents de référence, guides techniques et info
 2. Consultez les [ACTIONS_FUTURES.md](04_Suivi_et_Ressources/ACTIONS_FUTURES.md) pour voir les tâches prioritaires.
 
 ---
-*Dernière mise à jour: 2026-07-22*
+*Dernière mise à jour: 2026-08-23*
